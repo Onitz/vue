@@ -1,1 +1,4 @@
 06:58 PM 2017/11/06		012 - v-bind attribute.html
+07:12 PM 2017/11/06		013 - v-once to just use first value, dont update.html
+07:26 PM 2017/11/06		015 - v-once to just use first value, dont update.html
+07:27 PM 2017/11/06		016 - v-once to just use first value, dont update.html

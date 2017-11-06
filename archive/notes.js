@@ -41,4 +41,6 @@ There is this VueJs layer instance in the middle
 {{brace notation does not work in attributes!}}
 v-DIRECTIVE
   <a v-bind:href="link">link to Dabson</a>
+  permits binding dynamic data to html attributes
 
+MUST DO DOUBLE QUOTES IN git commit -m "commit message"
