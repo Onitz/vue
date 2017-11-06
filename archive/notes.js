@@ -49,3 +49,7 @@ MUST DO DOUBLE QUOTES IN git commit -m "commit message"
 v-html="finishedLink" tells vue to parse data.finishedLin as html
       finishedLink: '<a href="https://dabson.co">Dbs</a>'
 
+v-bind: binds model data -> html template 
+v-on:   binds template event -> model data
+
+    [[ this is the 2-way data binding ]]
