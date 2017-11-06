@@ -21,7 +21,7 @@ for x in fileList:
 nextno = maxno + 1
 
 shutil.copy2(fileto, archive+str(nextno).zfill(3)+'.html')
-shutil.copy2(filefrom, fileto)
+#shutil.copy2(filefrom, fileto) #(optional, reset index.html)
 log.write('\n'+str(nextno).zfill(3) + '\t\t' + time.strftime("%I:%M %p %Y/%m/%d"))
 print 'Flushed index: ' + str(nextno)
 log.close()
