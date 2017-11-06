@@ -44,3 +44,8 @@ v-DIRECTIVE
   permits binding dynamic data to html attributes
 
 MUST DO DOUBLE QUOTES IN git commit -m "commit message"
+{{ braceNotation }} is parsed as text
+
+v-html="finishedLink" tells vue to parse data.finishedLin as html
+      finishedLink: '<a href="https://dabson.co">Dbs</a>'
+
