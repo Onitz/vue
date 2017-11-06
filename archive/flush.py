@@ -3,6 +3,7 @@ from os import listdir
 from os.path import isfile, join
 import time
 import shutil
+from bs4 import BeautifulSoup
 
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
@@ -20,9 +21,14 @@ for x in fileList:
     maxno = int(n)
 nextno = maxno + 1
 
-shutil.copy2(fileto, archive+str(nextno).zfill(3)+'.html')
+title = ''
+soup = BeautifulSoup(open(fileto), "html.parser")
+title = soup.title.string
+newFilename = str(nextno).zfill(3)+' - '+title+'.html'
+
+shutil.copy2(fileto, archive+newFilename)
 #shutil.copy2(filefrom, fileto) #(optional, reset index.html)
-log.write('\n'+str(nextno).zfill(3) + '\t\t' + time.strftime("%I:%M %p %Y/%m/%d"))
+log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilename)
 print 'Flushed index: ' + str(nextno)
 log.close()
 

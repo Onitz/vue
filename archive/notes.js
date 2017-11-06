@@ -37,3 +37,8 @@ There is this VueJs layer instance in the middle
   (because vuejs proxies them for us)
   we can call this. anywhere in our Vue Instance object
   to get access to any of our vue properties
+
+{{brace notation does not work in attributes!}}
+v-DIRECTIVE
+  <a v-bind:href="link">link to Dabson</a>
+
