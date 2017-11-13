@@ -1,4 +1,5 @@
-REM Usage: vf "Commit message" -> flushes, adds, commits
-REM Vue Flush: vf command used for flushing a file & commiting with first param as message
-REM Commit Message must be delimited with double quotes, $T splits commands
-doskey vf=F: $T cd F:\Dropbox\projects\vue\archive $T python flush.py $T cd F:\Dropbox\projects\vue $T git add . $T git commit -m $1 $T git push
+REM Usage: vf "Commit message" -> flushes, adds, commits with first param as message (delimited with double quotes)
+REM regedit HKEY_CURRENT_USER/Software/Microsoft/Command Processor/AutoRun(string) [dir]\doskey.bat
+SET gdir = F:\git
+SET gidr = F:\Dropbox\projects
+doskey vf=F: $T cd %gdir%\vue\archive $T python flush.py $T cd %gdir%\vue $T git add . $T git commit -m $1 $T git push
