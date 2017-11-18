@@ -89,3 +89,12 @@ v-on:keyup.stop
 
 https://vuejs.org/v2/guide/events.html#Key-Modifiers
 
+can evaluate simple javascript statements in v-on:click 
+"simple" = no if / for etc
+templates really are a mixture of js + html 
+
+{{ template expressions }}
+reactivity, 
+true power of the framework comes in when having to listen to all our datapoints and respond 
+lots of complex interactions would get incredibly verbose & soupy with ie jquery 
+

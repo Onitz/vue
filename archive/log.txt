@@ -8,3 +8,4 @@
 07:55 PM 2017/11/06		016 - bind event to data.html
 10:13 AM 2017/11/19		017 - key events + event modifiers.html
 10:30 AM 2017/11/19		018 - key events + event modifiers.html
+10:40 AM 2017/11/19		019 - evaluate simple js expressions in i-o.html
