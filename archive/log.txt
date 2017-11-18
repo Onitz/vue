@@ -10,3 +10,4 @@
 10:30 AM 2017/11/19		018 - key events + event modifiers.html
 10:40 AM 2017/11/19		019 - evaluate simple js expressions in i-o.html
 10:43 AM 2017/11/19		020 - 2-way databinding.html
+10:52 AM 2017/11/19		021 - sync.html

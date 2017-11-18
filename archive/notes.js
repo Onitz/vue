@@ -102,3 +102,4 @@ v-model: 2WAY!
   v-bind: model -> html
   v-on:   event -> model
 
+vuejs makes it easier to model cross-property dependencies
