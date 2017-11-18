@@ -98,3 +98,7 @@ reactivity,
 true power of the framework comes in when having to listen to all our datapoints and respond 
 lots of complex interactions would get incredibly verbose & soupy with ie jquery 
 
+v-model: 2WAY!
+  v-bind: model -> html
+  v-on:   event -> model
+
