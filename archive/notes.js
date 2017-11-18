@@ -103,3 +103,8 @@ v-model: 2WAY!
   v-on:   event -> model
 
 vuejs makes it easier to model cross-property dependencies
+
+DATA IS NOT REACTIVE,
+so data{ result: this.counter++}
+MUST NOT NAME DATA properties same as METHODS
+

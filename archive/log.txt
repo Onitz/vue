@@ -11,3 +11,4 @@
 10:40 AM 2017/11/19		019 - evaluate simple js expressions in i-o.html
 10:43 AM 2017/11/19		020 - 2-way databinding.html
 10:52 AM 2017/11/19		021 - sync.html
+10:58 AM 2017/11/19		022 - slightly better way to cross-reference reactive field.html
