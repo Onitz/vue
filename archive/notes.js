@@ -53,3 +53,39 @@ v-bind: binds model data -> html template
 v-on:   binds template event -> model data
 
     [[ this is the 2-way data binding ]]
+file:///F:/Dropbox/projects/vue/index.html
+
+                                                                            <v-on:click="increase(2, $event)">Click me</button>
+
+                                                                            methods{
+                                                                              updateCoords: function(event) {
+                                                                                this.x = event.clientX;
+                                                                                this.y = event.clientY;
+                                                                              },
+                                                                              increase: function(step) {
+                                                                                this.countr += step;
+                                                                              }
+                                                                            }
+$event lets y ou manually pass in the event object to multi-input functions
+<span v-on:mousemove.stop="">DEAD SPOT</span>
+v-on:mousemove.stop.propegate
+
+v-on:keyup.stop 
+
+'.stop' is the event modifier
+
+<input v-on:keyup.enter="submit">
+<input @keyup.enter="submit">
+
+.enter 
+.tab 
+.delete 
+.esc 
+.space 
+.up 
+.down 
+.left 
+.right
+
+https://vuejs.org/v2/guide/events.html#Key-Modifiers
+
