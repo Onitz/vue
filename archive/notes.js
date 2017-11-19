@@ -125,3 +125,5 @@ evertyhing stored in computed can be used like something stored in the data obje
 only, COMPUTED IS REACTIVE
 computed is preffered cause its caching the result instead of recalculating
 
+computed: setup the property, then set a function how it should be computed 
+computed is better optimised than watch

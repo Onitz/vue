@@ -14,3 +14,4 @@
 10:58 AM 2017/11/19		022 - slightly better way to cross-reference reactive field.html
 
 12:42 PM 2017/11/19		023 - computed.html
+12:48 PM 2017/11/19		024 - watch property.html
