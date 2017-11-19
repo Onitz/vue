@@ -12,15 +12,5 @@
 10:43 AM 2017/11/19		020 - 2-way databinding.html
 10:52 AM 2017/11/19		021 - sync.html
 10:58 AM 2017/11/19		022 - slightly better way to cross-reference reactive field.html
-11:15 AM 2017/11/19		023 - slightly better way to cross-reference reactive field.html
-11:16 AM 2017/11/19		024 - slightly better way to cross-reference reactive field.html
-11:17 AM 2017/11/19		025 - slightly better way to cross-reference reactive field.html
-12:15 PM 2017/11/19		026 - slightly better way to cross-reference reactive field.html
-12:19 PM 2017/11/19		027 - slightly better way to cross-reference reactive field.html
-12:20 PM 2017/11/19		028 - slightly better way to cross-reference reactive field.html
-12:20 PM 2017/11/19		029 - slightly better way to cross-reference reactive field.html
-12:22 PM 2017/11/19		030 - slightly better way to cross-reference reactive field.html
-12:22 PM 2017/11/19		031 - slightly better way to cross-reference reactive field.html
-12:23 PM 2017/11/19		032 - slightly better way to cross-reference reactive field.html
-12:23 PM 2017/11/19		033 - slightly better way to cross-reference reactive field.html
-12:26 PM 2017/11/19		034 - slightly better way to cross-reference reactive field.html
+
+12:42 PM 2017/11/19		023 - computed.html
