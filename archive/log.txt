@@ -15,3 +15,4 @@
 11:15 AM 2017/11/19		023 - slightly better way to cross-reference reactive field.html
 11:16 AM 2017/11/19		024 - slightly better way to cross-reference reactive field.html
 11:17 AM 2017/11/19		025 - slightly better way to cross-reference reactive field.html
+12:15 PM 2017/11/19		026 - slightly better way to cross-reference reactive field.html
