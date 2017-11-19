@@ -127,3 +127,7 @@ computed is preffered cause its caching the result instead of recalculating
 
 computed: setup the property, then set a function how it should be computed 
 computed is better optimised than watch
+however computed MUST be synchronous, watch can be asynchronous
+
+v-on:click === @click 
+v-bind:href === :href
