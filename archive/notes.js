@@ -108,3 +108,20 @@ DATA IS NOT REACTIVE,
 so data{ result: this.counter++}
 MUST NOT NAME DATA properties same as METHODS
 
+Known options for vue instance 
+  el: Connect to DOM 
+  data: store data to be used 
+  methods: methods of this vue instance 
+  computed: dependent properties 
+
+es6 syntax:
+  result() {...}
+
+es5 syntax:
+  result: function() {...}
+
+computed{ output } is not called like a function, its used as a property
+evertyhing stored in computed can be used like something stored in the data object 
+only, COMPUTED IS REACTIVE
+computed is preffered cause its caching the result instead of recalculating
+
