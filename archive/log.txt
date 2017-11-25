@@ -21,3 +21,4 @@
 03:09 PM 2017/11/25		027 - computed class selector.html
 03:25 PM 2017/11/25		028 - dynamic css classes.html
 07:44 AM 2017/11/26		029 - Dynamic styling no class.html
+07:46 AM 2017/11/26		030 - Dynamic styling no class 2.html
