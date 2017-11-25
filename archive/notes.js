@@ -203,4 +203,9 @@ vue creates a dynamic local variable for v-for loops
 
     (arrayElement, arrayIndex)
 
-v-for (value, key) for objs or (value, index) for arrays
+v-for (value, key, index) for objs or (value, index) for arrays
+
+  <span v-for="n in 10">
+    {{n}}
+  </span>
+  ew, 1-indexed
