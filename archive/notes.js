@@ -179,3 +179,11 @@ failed {condClass: condCond}
 V-IF COMPLETELY DETACHES/ATTACHES ELEMENTS (and children) FROM THE DOM!
   (you should use these for error bubbles on forms)
 
+
+v-if 
+v-else-if 
+v-else 
+
+<template> is html5 code - it doesnt get rendered in the dom </template
+
+v-show
