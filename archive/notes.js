@@ -186,4 +186,6 @@ v-else
 
 <template> is html5 code - it doesnt get rendered in the dom </template
 
-v-show
+v-show keeps element in dom with display:none 
+Note that v-show doesn’t support the <template> element, nor does it work with v-else
+
