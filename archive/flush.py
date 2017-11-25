@@ -29,7 +29,7 @@ soup = BeautifulSoup(open(fileto), "html.parser")
 title = soup.title.string
 newFilename = str(nextno).zfill(3)+' - '+title+'.html'
 
-if filecmp.cmp(archive+highestFileName, fileto):
+if not filecmp.cmp(archive+highestFileName, fileto):
   shutil.copy2(fileto, archive+newFilename)
   #shutil.copy2(filefrom, fileto) #(optional, reset index.html)
   log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilename)
