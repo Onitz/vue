@@ -113,6 +113,12 @@ Known options for vue instance
   data: store data to be used 
   methods: methods of this vue instance 
   computed: dependent properties 
+  watch: (possibly async) fire on data mutation - overides computed
+
+DO NOT REDEFINE SAME NAME IN 
+  DATA / METHODS / COMPUTED
+
+WE CAN WATCH COMPUTED METHODS (in lieu of data- see exercise3)
 
 es6 syntax:
   result() {...}
