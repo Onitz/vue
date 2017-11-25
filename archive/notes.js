@@ -144,3 +144,10 @@ v-bind:href === :href
 |   @events 
 |   :attributes 
 ---------------------
+
+key: css class, value: condition
+
+  <div 
+    class="demo" 
+    @click="attachRed=!attachRed" 
+    :class="{red: attachRed, blue: !attachRed}"></div>
