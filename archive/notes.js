@@ -103,6 +103,7 @@ v-model: 2WAY!
   v-bind: model -> html
   v-on:   event -> model
 
+<a v-bind:href="link">link to Dabson</a>
 vuejs makes it easier to model cross-property dependencies
 
 DATA IS NOT REACTIVE,
@@ -141,8 +142,8 @@ v-bind:href === :href
 
 
 ---------------------
-|   @events 
-|   :attributes 
+|   @events                 @click  === v-on:click=...
+|   :attributes             :href   === v-attr:href=...
 ---------------------
 
 key: css class, value: condition
@@ -152,10 +153,24 @@ key: css class, value: condition
     @click="attachRed=!attachRed" 
     :class="{red: attachRed, blue: !attachRed}"></div>
 
-740-1140 goal
-
-can do 
-
+can do styling
   :style="{backgroundColor:, 'ff0'}"
-or 
   :style="{'background-color': 'ff0}"
+
+can also
+  :style="[myStyle, {height: width+'px'}]"
+
+mix & match styles binding
+vue-js prefixes for cross-browser compatibility 
+
+setTimeout(func, 5000) - fires after 5000 milliseconds
+setInterval(func, 1000) - fires every 1000 milliseconds
+
+conditional classes - condition comes AFTER classname ie 
+{red: attachRed, blue: !attachRed}
+
+be sure to double quote keywords if classnames ie 
+(.outline is a class)
+class="{'outline': toggleOutline}"
+
+failed {condClass: condCond}
