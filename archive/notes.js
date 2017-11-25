@@ -196,5 +196,9 @@ vue creates a dynamic local variable for v-for loops
         {name: 'Anna', age:'unknown',color:'blue'}
       ]
     }
-    
-    <li v-for="ing in  ingredients">{{ ing }}</li>
+
+    <li v-for="(ingreedient, index) in ingredients">
+      {{ ingreedient }} ({{ index }})
+    </li>
+
+    (arrayElement, arrayIndex)

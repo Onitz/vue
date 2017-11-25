@@ -26,3 +26,4 @@
 09:59 AM 2017/11/26		032 - v-if on template (html5 tag).html
 10:05 AM 2017/11/26		033 - v-show hides elements, does not work with template tag.html
 10:09 AM 2017/11/26		034 - v-for.html
+10:11 AM 2017/11/26		035 - v-for with indices.html
