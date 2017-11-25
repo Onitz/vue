@@ -5,8 +5,14 @@ new Vue({
     myClass: '',
     condClass: 'outlee',
     condCond: true,
-    myStyle: '',
-    load: 0
+    myStyle: {
+      backgroundColor:'yellow',
+      border: '1px solid red',
+      width: '50px',
+      height: '50px'
+    },
+    load: 0,
+    vueVarGreen: 'green'
   },
   methods: {
     startEffect: function() {
@@ -20,10 +26,11 @@ new Vue({
     startProgress: function() {
       var vm = this;
       var ticker = setInterval(function f(){
-        vm.load++;
         if( vm.load > 99 ) {
           clearInterval(ticker);
+          return;
         }
+        vm.load++;
         console.log(vm.load);
       }, 50);
     }
