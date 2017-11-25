@@ -209,3 +209,10 @@ v-for (value, key, index) for objs or (value, index) for arrays
     {{n}}
   </span>
   ew, 1-indexed
+
+vue auto-proxies the array when you push 
+
+if you need to re-order the list, adding :key="ingreedient"
+tells vue behind the scense to keep track of the entire 
+list element instead of just patch + overwrite 
+
