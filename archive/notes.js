@@ -151,3 +151,11 @@ key: css class, value: condition
     class="demo" 
     @click="attachRed=!attachRed" 
     :class="{red: attachRed, blue: !attachRed}"></div>
+
+740-1140 goal
+
+can do 
+
+  :style="{backgroundColor:, 'ff0'}"
+or 
+  :style="{'background-color': 'ff0}"

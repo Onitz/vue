@@ -20,3 +20,4 @@
 02:20 PM 2017/11/25		026 - css bind color box.html
 03:09 PM 2017/11/25		027 - computed class selector.html
 03:25 PM 2017/11/25		028 - dynamic css classes.html
+07:44 AM 2017/11/26		029 - Dynamic styling no class.html
