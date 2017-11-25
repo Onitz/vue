@@ -202,3 +202,5 @@ vue creates a dynamic local variable for v-for loops
     </li>
 
     (arrayElement, arrayIndex)
+
+v-for (value, key) for objs or (value, index) for arrays

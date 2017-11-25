@@ -28,3 +28,4 @@
 10:09 AM 2017/11/26		034 - v-for.html
 10:11 AM 2017/11/26		035 - v-for with indices.html
 10:13 AM 2017/11/26		036 - v-for with indices and template.html
+10:19 AM 2017/11/26		037 - v-for (value, key) for objs or (value, index) for arrays.html
