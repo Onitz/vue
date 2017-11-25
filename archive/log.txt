@@ -18,7 +18,3 @@
 01:30 PM 2017/11/19		025 - shorthand.html
 02:09 PM 2017/11/25		026 - shorthand.html
 02:20 PM 2017/11/25		026 - css bind color box.html
-02:22 PM 2017/11/25		027 - css bind color box.html
-02:23 PM 2017/11/25		028 - css bind color box.html
-02:24 PM 2017/11/25		029 - css bind color box.html
-02:25 PM 2017/11/25		030 - css bind color box.html
