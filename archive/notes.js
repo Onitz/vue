@@ -179,7 +179,6 @@ failed {condClass: condCond}
 V-IF COMPLETELY DETACHES/ATTACHES ELEMENTS (and children) FROM THE DOM!
   (you should use these for error bubbles on forms)
 
-
 v-if 
 v-else-if 
 v-else 
@@ -189,3 +188,13 @@ v-else
 v-show keeps element in dom with display:none 
 Note that v-show doesn’t support the <template> element, nor does it work with v-else
 
+vue creates a dynamic local variable for v-for loops 
+    data: {
+      ingredients: ['meat','fruit','cookies'],
+      persons:[
+        {name: 'Dabson', age: 28, color: 'red'},
+        {name: 'Anna', age:'unknown',color:'blue'}
+      ]
+    }
+    
+    <li v-for="ing in  ingredients">{{ ing }}</li>
