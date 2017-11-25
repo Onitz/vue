@@ -174,3 +174,8 @@ be sure to double quote keywords if classnames ie
 class="{'outline': toggleOutline}"
 
 failed {condClass: condCond}
+
+
+V-IF COMPLETELY DETACHES/ATTACHES ELEMENTS (and children) FROM THE DOM!
+  (you should use these for error bubbles on forms)
+
