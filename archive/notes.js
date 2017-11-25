@@ -55,17 +55,18 @@ v-on:   binds template event -> model data
     [[ this is the 2-way data binding ]]
 file:///F:/Dropbox/projects/vue/index.html
 
-                                                                            <v-on:click="increase(2, $event)">Click me</button>
+                <v-on:click="increase(2, $event)">Click me</button>
 
-                                                                            methods{
-                                                                              updateCoords: function(event) {
-                                                                                this.x = event.clientX;
-                                                                                this.y = event.clientY;
-                                                                              },
-                                                                              increase: function(step) {
-                                                                                this.countr += step;
-                                                                              }
-                                                                            }
+                methods{
+                  updateCoords: function(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                  },
+                  increase: function(step) {
+                    this.countr += step;
+                  }
+                }
+
 $event lets y ou manually pass in the event object to multi-input functions
 <span v-on:mousemove.stop="">DEAD SPOT</span>
 v-on:mousemove.stop.propegate
@@ -137,3 +138,9 @@ however computed MUST be synchronous, watch can be asynchronous
 
 v-on:click === @click 
 v-bind:href === :href
+
+
+---------------------
+|   @events 
+|   :attributes 
+---------------------
