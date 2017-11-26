@@ -216,3 +216,26 @@ if you need to re-order the list, adding :key="ingreedient"
 tells vue behind the scense to keep track of the entire 
 list element instead of just patch + overwrite 
 
+v-if="Array.isArray(value)"
+
+^ much better check as it doesn't rely on the name of your data
+
+--------------------- Sect4 vue instance
+
+
+  <progress label="YOU" :value="player.hp" max="100"></progress>
+  <progress label="MONSTER" :value="monster.hp" max="100"></progress>
+
+^ assumes 100 hp max
+
+YOU CAN watch nested val by delimiting ie 'player.hp'
+
+ok, so the order of the watch funtions are 
+more important than the order of the mutator calls 
+async events looks like it just iterates through watch 
+to see what changed - kinda makes sense :)
+
+var vueInstance = this; // this must be redefined to access in the callback closure
+setTimeout(function() {
+  vueInstance.counter = 0;
+}, 2000);

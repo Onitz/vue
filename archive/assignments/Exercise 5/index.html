@@ -21,11 +21,11 @@
   <!-- 4) Print the following object (only the values) and also create a nested loop for the array: {name: 'TESTOBJECT', data: [1.67, 1.33, 0.98, 2.21]} (hint: use v-for and v-if to achieve this) -->
   <hr>
   <ul v-for="(val, key, i) in testData">
-    <li v-if="key!='data'">
+    <li v-if="!Array.isArray(val)">
       {{ val }}
     </li>
-    <li v-else v-for="(innerVal, innerI) in val" style="list-style-type:circle">
-      {{ innerVal }}
+    <li v-else v-for="el in val" style="list-style-type:circle">
+      {{ el }}
     </li>
   </ul>
 </div>
