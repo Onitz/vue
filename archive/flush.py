@@ -29,7 +29,7 @@ title = ''
 soup = BeautifulSoup(open(fileto), "html.parser")
 title = soup.title.string
 newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html'
-newFilenameFromPythonArg = sys.argv[1]
+newFilenameFromPythonArg = str(nextno).zfill(3)+' - '+sys.argv[1]+'.html'
 
 if not filecmp.cmp(archive+highestFileName, fileto):
   shutil.copy2(fileto, archive+newFilenameFromPythonArg)
