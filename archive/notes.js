@@ -239,3 +239,10 @@ var vueInstance = this; // this must be redefined to access in the callback clos
 setTimeout(function() {
   vueInstance.counter = 0;
 }, 2000);
+
+----
+vf commit message
+Multiple vue instances is useful if you have multiple widgets that arnt connected
+(ie calender vue widget + map picker vue widget)
+If they are connected from biz logic perspective, still reccomended keeping them in one 
+
