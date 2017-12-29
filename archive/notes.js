@@ -290,3 +290,12 @@ document.getElementById('app3').appendChild(vm3.$el);
   //uncommon, but interesting 
 
 Components allow you to re-insert a template: in multiple places
+Vuejs has an optional compiler that compiles html <template> to vue template:
+
+
+      vueInstance   <--watch-->   Virtual Dom   <--Update-->   DOM
+
+
+update is not called if no difference is made (efficient, no needless render)
+Destroying just deletes the javascript, the formerly vue-controled html still remains
+

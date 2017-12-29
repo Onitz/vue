@@ -43,3 +43,4 @@
 07:10 PM 2017/12/29		046 - manually mount (generate html from vue instance and template).html
 07:13 PM 2017/12/29		047 - el selector only applies once.html
 07:26 PM 2017/12/29		048 - components.html
+08:34 PM 2017/12/29		049 - Lifecycle Hooks.html
