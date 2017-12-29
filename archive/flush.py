@@ -5,6 +5,7 @@ from os.path import isfile, join
 import time
 import shutil
 from bs4 import BeautifulSoup
+import sys
 
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
@@ -27,12 +28,13 @@ nextno = maxno + 1
 title = ''
 soup = BeautifulSoup(open(fileto), "html.parser")
 title = soup.title.string
-newFilename = str(nextno).zfill(3)+' - '+title+'.html'
+newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html'
+newFilenameFromPythonArg = sys.argv[1]
 
 if not filecmp.cmp(archive+highestFileName, fileto):
-  shutil.copy2(fileto, archive+newFilename)
+  shutil.copy2(fileto, archive+newFilenameFromPythonArg)
   #shutil.copy2(filefrom, fileto) #(optional, reset index.html)
-  log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilename)
+  log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilenameFromPythonArg)
   print 'Flushed index: ' + str(nextno)
 
 log.close()

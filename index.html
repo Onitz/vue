@@ -2,23 +2,37 @@
 <style>body{margin:0;padding:0;font-family:'Ubuntu Mono;Arial;sans-serif';}</style></head>
 <body>
   
-<div id="app1">{{ title }}</div>
-<div id="app2">{{ title }}</div>
+<div id="app1"><h1>{{ title }}</h1><button @click="onChange">Change1</button></div>
+<div id="app2"><h1>{{ title }}</h1><button @click="onChange">Change2</button></div>
 <script type="text/javascript" src="archive/vue.js"></script><script>
 
-new Vue({
+var vm1 = new Vue({
   el: '#app1',
   data: {
     title: "First instance"
+  },
+  methods: {
+    onChange: function() {
+      vm2.title="Changed!";
+    }
   }
 });
 
-new Vue({
+var vm2 = new Vue({
   el: '#app2',
   data: {
     title: "Second instance"
+  },
+  methods: {
+    onChange: function() {
+      vm1.title="Changed!";
+    }
   }
 });
+
+setTimeout(function() {
+  vm2.title="Changed by Timer";
+}, 3000);
   
 </script> 
 </body>
