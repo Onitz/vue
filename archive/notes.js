@@ -258,3 +258,14 @@ need to run page via local server to get vue plugin features
 vm1.prop1 = "new";
   so vm1.prop1 is accessible, but not reactive
 
+vm1.$data.title
+  ^ equivilant way of vm1.title (bypass Vues auto-generated getter)
+
+<button @click="show" ref="myButton">Show Paragraph</button>
+vm1.$refs.myButton  //shows the javascript object
+  Vues REF attribute allows you to directly acess elements from vue:
+
+vm1.$refs.heading.innerText = "Something Else";
+  Vue creates a template based off the html code, so vue RERENDERS a template 
+  Its basically overriding the DOM 
+

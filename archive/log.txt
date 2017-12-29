@@ -41,3 +41,4 @@
 05:54 PM 2017/12/29		043 - check yoself.html
 05:56 PM 2017/12/29		043 - inter-dependent instances.html
 06:35 PM 2017/12/29		044 - manually add properties.html
+06:48 PM 2017/12/29		045 - Vue REFS.html
