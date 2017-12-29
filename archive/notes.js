@@ -1,4 +1,4 @@
-//vuejs Start 6:11
+vuejs.org/api
 
 new Vue({ el:'', data{}, methods{} });
   * Arguments are passed to directives(v-on) via a colon, ie vue-on:input="myMethod"
@@ -263,9 +263,28 @@ vm1.$data.title
 
 <button @click="show" ref="myButton">Show Paragraph</button>
 vm1.$refs.myButton  //shows the javascript object
-  Vues REF attribute allows you to directly acess elements from vue:
+  // Vues REF attribute allows you to directly acess elements from vue:
 
 vm1.$refs.heading.innerText = "Something Else";
-  Vue creates a template based off the html code, so vue RERENDERS a template 
-  Its basically overriding the DOM 
+  // Vue creates a template based off the html code, so vue RERENDERS a template 
+  // Its basically overriding the DOM 
 
+CREATE -> MOUNT -> UPDATE -> DESTROY
+------------------------ Vue Js Life Cycle Hooks ------------------------
+beforeCreate()  -> created() -> 
+beforeMount()   -> mounted() ->
+beforeUpdate()  -> updated() ->
+beforeDestroy() -> destroyed()
+-------------------------------------------------------------------------
+
+//<div id="app3"></div>
+var vm3 = new Vue({
+  template: '<h1>Hello!</h1>'
+});
+vm3.$mount('#app3');
+  /// You can manually pass in a template to the vue instance
+
+ALTERNATIVELY: 
+vm3.$mount(); // (no argument) renders the el(ement), but does not put it anywhere
+document.getElementById('app3').appendChild(vm3.$el);
+  //uncommon, but interesting 
