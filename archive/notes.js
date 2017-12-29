@@ -288,3 +288,5 @@ ALTERNATIVELY:
 vm3.$mount(); // (no argument) renders the el(ement), but does not put it anywhere
 document.getElementById('app3').appendChild(vm3.$el);
   //uncommon, but interesting 
+
+Components allow you to re-insert a template: in multiple places
