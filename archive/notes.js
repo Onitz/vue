@@ -246,3 +246,15 @@ Multiple vue instances is useful if you have multiple widgets that arnt connecte
 (ie calender vue widget + map picker vue widget)
 If they are connected from biz logic perspective, still reccomended keeping them in one 
 
+vuejs handles proxying for us so we can write 
+var vm1 = new Vue({...});
+setTimeout(function() {
+  vm2.title="Changed by Timer";
+}, 3000);
+
+Vue will only create the proxy/watchers for properties you 
+define in the vue options!
+need to run page via local server to get vue plugin features
+vm1.prop1 = "new";
+  so vm1.prop1 is accessible, but not reactive
+

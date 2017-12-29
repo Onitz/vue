@@ -40,3 +40,4 @@
 05:51 PM 2017/12/29		043 - test.html
 05:54 PM 2017/12/29		043 - check yoself.html
 05:56 PM 2017/12/29		043 - inter-dependent instances.html
+06:35 PM 2017/12/29		044 - manually add properties.html
