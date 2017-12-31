@@ -10,7 +10,7 @@ import sys
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
 fileTarget = '../proj/vue-cli/index.html' # '../index.html' for original
-archive  = 'webpack-simple html' # 'html/'
+archive  = 'webpack-simple html/' # 'html/'
 fileList = [f for f in listdir(archive) if isfile(join(archive, f))]
 
 maxno = 0
