@@ -9,8 +9,8 @@ import sys
 
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
-fileto   = '../index.html'
-archive  = 'html/'
+fileTarget = '../proj/vue-cli/index.html' # '../index.html' for original
+archive  = 'webpack-simple html' # 'html/'
 fileList = [f for f in listdir(archive) if isfile(join(archive, f))]
 
 maxno = 0
@@ -25,15 +25,16 @@ for x in fileList:
     highestFileName = x
 nextno = maxno + 1
 
+#extract the title from the html file or python argument
 title = ''
-soup = BeautifulSoup(open(fileto), "html.parser")
+soup = BeautifulSoup(open(fileTarget), "html.parser")
 title = soup.title.string
 newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html'
 newFilenameFromPythonArg = str(nextno).zfill(3)+' - '+sys.argv[1]+'.html'
 
-if not filecmp.cmp(archive+highestFileName, fileto):
-  shutil.copy2(fileto, archive+newFilenameFromPythonArg)
-  #shutil.copy2(filefrom, fileto) #(optional, reset index.html)
+if not filecmp.cmp(archive+highestFileName, fileTarget):
+  shutil.copy2(fileTarget, archive+newFilenameFromPythonArg)
+  #shutil.copy2(filefrom, fileTarget) #(optional, reset index.html)
   log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilenameFromPythonArg)
   print 'Flushed index: ' + str(nextno)
 
