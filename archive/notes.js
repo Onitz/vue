@@ -192,7 +192,7 @@ vue creates a dynamic local variable for v-for loops
     data: {
       ingredients: ['meat','fruit','cookies'],
       persons:[
-        {name: 'Dabson', age: 28, color: 'red'},
+        {name: 'Dabson', age: 128, color: 'red'},
         {name: 'Anna', age:'unknown',color:'blue'}
       ]
     }
@@ -299,3 +299,26 @@ Vuejs has an optional compiler that compiles html <template> to vue template:
 update is not called if no difference is made (efficient, no needless render)
 Destroying just deletes the javascript, the formerly vue-controled html still remains
 
+ch6. Why need a dev server
+  - can have cool tools (like compiling es6 to es5 for more compatibility)
+  - backend!
+  - minification
+  - compile single-file templates
+  - css compilers (sass/css)
+
+Vue CLI 
+  npm install -g vue-cli
+  - allows us to fetch VueJS project templates (project setups)
+    * simple 
+    * webpack-simple
+    * webpack (inc testing)
+    * browserify / browserify-simple 
+
+vue init webpack-simple vue-cli
+
+                                                                            2018 (6hrs go)
+                                                                            10:32 cli install
+
+vue init webpack-simple 
+
+transpiler (source-to-source compiler: converts one lang to another)
