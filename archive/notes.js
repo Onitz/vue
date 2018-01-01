@@ -420,3 +420,7 @@ new Vue({
     'my-comp': cmp //registers the component locally to instance
   }
 })
+
+render: h => h(App) // App is an object defined by
+// app.vue export default {...}
+// defining app as an object gives us the same limitations (replaces)
