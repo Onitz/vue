@@ -1,5 +1,15 @@
-vuejs.org/api
+  npm install vue-cli -g
+  vue init webpack-simple myProject
 
+https://github.com/vuejs/vue-cli
+  webpack    - A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction.
+  webpack    - simple - A simple Webpack + vue-loader setup for quick prototyping.
+  browserify - A full-featured Browserify + vueify setup with hot-reload, linting & unit testing.
+  browserify - simple - A simple Browserify + vueify setup for quick prototyping.
+  pwa        - PWA template for vue-cli based on the webpack template
+  simple     - The simplest possible Vue setup in a single HTML file
+
+vuejs.org/api
 new Vue({ el:'', data{}, methods{} });
   * Arguments are passed to directives(v-on) via a colon, ie vue-on:input="myMethod"
         this.title = event.target.value;
@@ -307,7 +317,8 @@ ch6. Why need a dev server
   - css compilers (sass/css)
 
 Vue CLI 
-  npm install -g vue-cli
+  npm install vue-cli -g
+  vue init webpack-simple myProject
   - allows us to fetch VueJS project templates (project setups)
     * simple 
     * webpack-simple
@@ -315,9 +326,9 @@ Vue CLI
     * browserify / browserify-simple 
 
 vue init webpack-simple vue-cli
-
-                                                                            2018 (6hrs go)
-                                                                            10:32 cli install
+                                                            Lect #82
+                                                            2018 (6hrs go)
+                                                            10:32 cli install
 
 vue init webpack-simple 
 transpiler (source-to-source compiler: converts one lang to another)
@@ -336,6 +347,8 @@ Ways to make a single-file template (special file compiled druing build process)
   -> but we can now split out our template and vue code in separate files 
      and have them compiled to normal javascript
      (can convert any html to js because there are native js representations)
+
+webpack-simple template used for rest of course 
 main.js
   render: h => h(App) (es6 arrow function)
   ^ vue.js passes us the render function h, which we then execute with the App template
@@ -343,3 +356,36 @@ main.js
 
   Vue file has a template, script ..and maybe a style
 export default {}
+
+npm run dev     -> build for development, auto-reload 
+npm run build   -> build for production, minified :)
+
+Alternative ways of loading App instead of render():
+1. ES6 Spread operator
+  babelrc 
+    {
+      "presets": [
+        ["es2015", { "modules": false }],
+        ["stage-2"]
+      ]
+    }
+
+  main.js 
+    import Vue from 'vue'
+    import App from './App.vue'
+     
+    const vm = new Vue({
+      ...App
+    });
+     
+    vm.$mount('#app');
+
+2. Using mount() (main.js)
+  import Vue from 'vue'
+  import App from './App.vue'
+   
+  const vm = new Vue({
+    ...App
+  });
+   
+  vm.$mount('#app');
