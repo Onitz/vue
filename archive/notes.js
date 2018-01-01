@@ -595,6 +595,11 @@ this way, you bind the data:name to the components property
 
 naming props: case sensitive?
 case-senstive names only work in templates which support it (ie single-file templates)
+@todo on every new file: move assets out of /src/
+lol, wrong email = no recognised github contributions
+git config --global user.email "email@email.email"
+user.name = "aaa" ?
 
-@todo on every new file: move assets out of /src 
+you can access props as a regular data property 
 
+up to 108, gj (12:01am)
