@@ -92,9 +92,6 @@ def copySrcDirIfDifferent(fromDir, toDirParent, logFile):
       highestFileName = x
   nextNo = str(maxNo + 1).zfill(3)
 
-  #print 'highest file: '+highestFileName
-  #print 'folder compare '+fromDir+' '+toDirParent+highestFileName + ' = ' + str(is_dir_contents_same(fromDir, toDirParent+highestFileName))
-  
   if not highestFileName or not is_dir_contents_same(fromDir, toDirParent+highestFileName):
     newDir=toDirParent+nextNo+' '+sys.argv[1]
     #os.makedirs(newDir)
