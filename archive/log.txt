@@ -72,3 +72,7 @@
 02:32 PM 2018/01/01		004 hello - App.vue
 02:32 PM 2018/01/01		004 hello - Home.vue
 02:32 PM 2018/01/01		004 hello - main.js
+03:21 PM 2018/01/01		005 local + global component imports - App.vue
+03:21 PM 2018/01/01		005 local + global component imports - Home.vue
+03:21 PM 2018/01/01		005 local + global component imports - main.js
+03:21 PM 2018/01/01		005 local + global component imports - ServerStatus.vue

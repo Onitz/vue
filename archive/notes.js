@@ -438,3 +438,19 @@ component elements (local & global) must have only
 ONE ROOT ELEMENT (template element will be removed in the end)
 data functions should return an object
 {}
+
+es6 import format: 
+  import ServerStatus from './ServerStatus.vue'
+
+npm run dev 
+
+GLOBAL IMPORT (main.js)
+  Vue.component('app-servers', Home); //global component 
+
+LOCAL IMPORT (App.vue) 
+  import ServerStatus from './ServerStatus.vue'
+  export default {
+    components: {
+      'app-server-status': ServerStatus
+    }
+  }
