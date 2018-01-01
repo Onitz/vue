@@ -587,3 +587,8 @@ sublime ctrl+A, ctrl+shift+I
   {"keys": ["ctrl+shift+i"], "command": "reindent", "args": {"single_line": false}}
 /weeeee
 
+<app-user-detail name="myvar">
+  ..passes in the literal text value myvar. 
+  To make it dynamic, must use colon :name (shorthand for v-bind:name)
+
+this way, you bind the data:name to the components property

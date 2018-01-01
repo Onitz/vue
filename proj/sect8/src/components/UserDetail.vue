@@ -8,9 +8,7 @@
 
 <script>
   export default {
-    props: {
-      name: ['name']
-    }
+    props: ['name']
   }
 </script>
 
