@@ -389,3 +389,27 @@ Alternative ways of loading App instead of render():
   });
    
   vm.$mount('#app');
+
+creating a vue instance only applies to the first element!
+Prefix component names to not interfere with other packages 
+Vue.component('my-cmp');
+
+data is an object when defined in vue instance 
+..but a function when defined in vue component {}
+
+Because a component extends the vue instance 
+redefining data object interferes with instance data properties 
+
+data: function() {
+  return {
+    status: 'critical'
+  }
+}
+
+  -- equiv (closure + arrow function) --
+
+data: () => ({ 
+  status: 'Critical'
+})
+
+YOU CANNOT SELF-CLOSE COMPONENT TAGS (<my-cmp/> is a no-no)
