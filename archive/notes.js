@@ -9,6 +9,15 @@ https://github.com/vuejs/vue-cli
   pwa        - PWA template for vue-cli based on the webpack template
   simple     - The simplest possible Vue setup in a single HTML file
 
+IMPORTING A COMPOENENT
+Main.js
+  import Home from './Home.vue'
+  Vue.component('app-server-status', Home);
+
+Home.vue
+  <template>...</template>
+  <script>export default {...}</script>
+
 vuejs.org/api
 new Vue({ el:'', data{}, methods{} });
   * Arguments are passed to directives(v-on) via a colon, ie vue-on:input="myMethod"
@@ -424,3 +433,8 @@ new Vue({
 render: h => h(App) // App is an object defined by
 // app.vue export default {...}
 // defining app as an object gives us the same limitations (replaces)
+
+component elements (local & global) must have only 
+ONE ROOT ELEMENT (template element will be removed in the end)
+data functions should return an object
+{}

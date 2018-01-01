@@ -53,3 +53,22 @@
 12:33 PM 2018/01/01		053 - data function is defined for each component instance.html
 12:36 PM 2018/01/01		054 - register component to app.html
 12:55 PM 2018/01/01		002 - component in webpack-simple.vue
+01:44 PM 2018/01/01		003 - hi.vue
+02:27 PM 2018/01/01		004 hi - App.vue
+02:27 PM 2018/01/01		004 hi - Home.vue
+02:27 PM 2018/01/01		004 hi - main.js
+02:28 PM 2018/01/01		005 hix - App.vue
+02:28 PM 2018/01/01		005 hix - Home.vue
+02:28 PM 2018/01/01		005 hix - main.js
+02:29 PM 2018/01/01		006 hix - App.vue
+02:29 PM 2018/01/01		006 hix - Home.vue
+02:29 PM 2018/01/01		006 hix - main.js
+02:29 PM 2018/01/01		007 hix - App.vue
+02:29 PM 2018/01/01		007 hix - Home.vue
+02:29 PM 2018/01/01		007 hix - main.js
+02:31 PM 2018/01/01		008 hix - App.vue
+02:31 PM 2018/01/01		008 hix - Home.vue
+02:31 PM 2018/01/01		008 hix - main.js
+02:32 PM 2018/01/01		004 hello - App.vue
+02:32 PM 2018/01/01		004 hello - Home.vue
+02:32 PM 2018/01/01		004 hello - main.js

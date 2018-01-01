@@ -25,7 +25,8 @@ def getNextNo(archiveFolder):
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
 htmlTarget = '../index.html'
-vueTarget = '../proj/vue-cli/src/App.vue'
+vueTargetDir = '../proj/vue-cli/src/'
+#vueTarget = vueTargetDir+'App.vue'
 htmlArchive = 'html/'
 vueArchive = 'webpack-simple html/'
 
@@ -40,17 +41,44 @@ title = soup.title.string
 newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html' '''
 
 newFilenameFromPythonArgHtml = str(nextNoHtml).zfill(3)+' - '+sys.argv[1]+'.html'
-newFilenameFromPythonArgVue = str(nextNoVue).zfill(3)+' - '+sys.argv[1]+'.vue'
+vuePrefix = str(nextNoVue).zfill(3)+' '+sys.argv[1]+' - '
+vueHighestPrefix = str(nextNoVue-1).zfill(3)+' '+sys.argv[1]+' - '
 
 if not filecmp.cmp(htmlArchive+highestFileNameHtml, htmlTarget):
   shutil.copy2(htmlTarget, htmlArchive+newFilenameFromPythonArgHtml)
   #shutil.copy2(filefrom, htmlTarget) #(optional, reset index.html)
   log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilenameFromPythonArgHtml)
-  print 'Flushed htm index: ' + str(nextNoHtml)
+  print 'Flushed html index: ' + str(nextNoHtml)
 
-if not filecmp.cmp(vueArchive+highestFileNameVue, vueTarget):
-  shutil.copy2(vueTarget, vueArchive+newFilenameFromPythonArgVue)
-  log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newFilenameFromPythonArgVue)
+isDifferent = False
+files = [] #files in the current project directory
+for filename in listdir(vueTargetDir):
+  if filename.endswith('.vue') or filename.endswith('.js'):
+    files.append(filename)
+    # print(join(vueTargetDir, filename))
+
+highestFiles = [] #highest indexed files in new directory
+for filename in listdir(vueArchive):
+  if filename.startswith(str(nextNoVue-1).zfill(3)):
+    highestFiles.append(filename)
+
+if len(highestFiles) != len(files):
+  isDifferent = True
+else:
+  for filename in highestFiles:
+    for filename2 in files:
+      if filename.endswith(filename2):
+        if not filecmp.cmp(vueArchive + filename, vueTargetDir+filename2):
+          isDifferent = True
+          break
+
+if isDifferent:
+  for filename in files:
+    vueTarget = vueTargetDir + filename
+    newFile = vueArchive + vuePrefix + filename
+    shutil.copy2(vueTarget, newFile)
+    log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + vuePrefix + filename)
   print 'Flushed vue index: ' + str(nextNoVue)
 
 log.close()
+ 
