@@ -50,3 +50,4 @@
 12:06 PM 2018/01/01		050 - no component example.html
 12:24 PM 2018/01/01		051 - COMPONENT REUSE.html
 12:29 PM 2018/01/01		052 - shared data between component instances.html
+12:33 PM 2018/01/01		053 - data function is defined for each component instance.html
