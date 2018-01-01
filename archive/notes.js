@@ -580,3 +580,10 @@ Trigger an event using $emit(eventName)
 slots, v-once (for cheap static components)
 
 5:38 break from reading 
+
+9:46 upgraded flusher(again), do more sect8
+
+sublime ctrl+A, ctrl+shift+I 
+  {"keys": ["ctrl+shift+i"], "command": "reindent", "args": {"single_line": false}}
+/weeeee
+
