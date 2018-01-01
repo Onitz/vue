@@ -1,12 +1,29 @@
 import re
 import filecmp
 import os
+import os.path
 from os import listdir
 from os.path import isdir, isfile, join
 import time
 import shutil
 from bs4 import BeautifulSoup
 import sys
+
+#https://stackoverflow.com/a/24860799/1175865
+class dircmp(filecmp.dircmp):
+    def phase3(self):
+        fcomp = filecmp.cmpfiles(self.left, self.right, self.common_files, shallow=False)
+        self.same_files, self.diff_files, self.funny_files = fcomp
+
+def is_dir_contents_same(dir1, dir2):
+    compared = dircmp(dir1, dir2)
+    if (compared.left_only or compared.right_only or compared.diff_files 
+        or compared.funny_files):
+        return False
+    for subdir in compared.common_dirs:
+        if not is_dir_contents_same(os.path.join(dir1, subdir), os.path.join(dir2, subdir)):
+            return False
+    return True
 
 def get_immediate_subdirectories(a_dir):
   return [name for name in os.listdir(a_dir)
@@ -76,9 +93,9 @@ def copySrcDirIfDifferent(fromDir, toDirParent, logFile):
   nextNo = str(maxNo + 1).zfill(3)
 
   #print 'highest file: '+highestFileName
-  print 'folder compare '+fromDir+' '+toDirParent+highestFileName + ' = ' + str(filecmp.cmp(fromDir, toDirParent+highestFileName))
+  print 'folder compare '+fromDir+' '+toDirParent+highestFileName + ' = ' + str(is_dir_contents_same(fromDir, toDirParent+highestFileName))
   
-  if not highestFileName or not filecmp.cmp(fromDir, toDirParent+highestFileName):
+  if not highestFileName or not is_dir_contents_same(fromDir, toDirParent+highestFileName):
     newDir=toDirParent+nextNo+' '+sys.argv[1]
     #os.makedirs(newDir)
     shutil.copytree(fromDir, newDir)

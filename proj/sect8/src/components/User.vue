@@ -37,6 +37,6 @@
 
 <style scoped>
 div {
-  background-color: lightblue;
+  background-color: lightblue; 
 }
 </style>

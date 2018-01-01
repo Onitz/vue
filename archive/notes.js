@@ -596,3 +596,5 @@ this way, you bind the data:name to the components property
 naming props: case sensitive?
 case-senstive names only work in templates which support it (ie single-file templates)
 
+@todo on every new file: move assets out of /src 
+
