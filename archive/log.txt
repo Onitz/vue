@@ -46,3 +46,4 @@
 08:34 PM 2017/12/29		049 - Lifecycle Hooks.html
 10:53 AM 2018/01/01		001 - test new flusher.html
 10:54 AM 2018/01/01		001 - test new flusher 2.html
+11:27 AM 2018/01/01		001 - basic template.vue

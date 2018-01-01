@@ -26,10 +26,11 @@ for x in fileList:
 nextno = maxno + 1
 
 #extract the title from the html file or python argument
+'''
 title = ''
 soup = BeautifulSoup(open(fileTarget), "html.parser")
 title = soup.title.string
-newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html'
+newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html' '''
 newFilenameFromPythonArg = str(nextno).zfill(3)+' - '+sys.argv[1]+'.vue'
 
 if not filecmp.cmp(archive+highestFileName, fileTarget):
