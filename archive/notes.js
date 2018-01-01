@@ -454,3 +454,26 @@ LOCAL IMPORT (App.vue)
       'app-server-status': ServerStatus
     }
   }
+
+preferably store components in /components or /components/feature for each feature in bigger app-servers
+You can use case-sensitive selectors
+components: {
+  caseSensitiveSelector: myComponent
+}
+
+vuejs translates component selectors between camelCase and hypenated 
+Servers: Servers, -> Servers,
+^this is an ES6 shorthand, not vue :)
+
+<style scoped> for scoping styles (in a vue file)
+  - behind the scenes, this emulates the behavior of the shadow dom 
+  (in upcoming browsers, each element has a nested/sub dom)
+  while its a future browser consideration, vue implements it today (via data hash attribute eg data-v-b6ac6130)
+
+<div data-v-3501a3b2>
+
+<style>
+div[data-v-3501a3b2]
+</style>/
+das prey cool 
+
