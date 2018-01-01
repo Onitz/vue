@@ -2,15 +2,15 @@ import re
 import filecmp
 import os
 from os import listdir
-from os.path import isfile, join
+from os.path import isdir, isfile, join
 import time
 import shutil
 from bs4 import BeautifulSoup
 import sys
 
 def get_immediate_subdirectories(a_dir):
-    return [name for name in os.listdir(a_dir)
-            if os.path.isdir(os.path.join(a_dir, name))]
+  return [name for name in os.listdir(a_dir)
+    if os.path.isdir(os.path.join(a_dir, name))]
 
 def getNextNo(archiveFolder):
   try:
@@ -30,6 +30,7 @@ def getNextNo(archiveFolder):
   nextno = maxno + 1
   return [nextno,highestFileName]
 
+#only immediate .vue and .js files in the fromDir
 def copySrcIfDifferent(fromDir, toDir, nextNoVue, logFile):
   vuePrefix = str(nextNoVue).zfill(3)+' '+sys.argv[1]+' - '
   isDifferent = False
@@ -61,6 +62,28 @@ def copySrcIfDifferent(fromDir, toDir, nextNoVue, logFile):
       log.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + vuePrefix + filename)
     print 'Flushed vue index: ' + str(nextNoVue) + ' to ' + toDir
 
+def copySrcDirIfDifferent(fromDir, toDirParent, logFile):
+  maxNo = 0
+  highestFileName = ''
+  for x in [f for f in listdir(toDirParent) if isdir(join(toDirParent, f))]:
+    try:
+      n = re.match('(\d+).*', x).group(1)
+    except:
+      continue
+    if n > maxNo:
+      maxNo = int(n)
+      highestFileName = x
+  nextNo = str(maxNo + 1).zfill(3)
+
+  #print 'highest file: '+highestFileName
+  print 'folder compare '+fromDir+' '+toDirParent+highestFileName + ' = ' + str(filecmp.cmp(fromDir, toDirParent+highestFileName))
+  
+  if not highestFileName or not filecmp.cmp(fromDir, toDirParent+highestFileName):
+    newDir=toDirParent+nextNo+' '+sys.argv[1]
+    #os.makedirs(newDir)
+    shutil.copytree(fromDir, newDir)
+    logFile.write('\n'+ time.strftime("%I:%M %p %Y/%m/%d") + '\t\t' + newDir)
+
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
 htmlTarget = '../index.html'
@@ -81,7 +104,8 @@ for sub in get_immediate_subdirectories(projDir):
   if not os.path.exists(sub):
     os.makedirs(sub)
   nextNoVue, highestFileNameVue = getNextNo(sub)
-  copySrcIfDifferent(projDir+sub+'/src/', sub+'/', nextNoVue, log )
+  #copySrcIfDifferent(projDir+sub+'/src/', sub+'/', nextNoVue, log)
+  copySrcDirIfDifferent(projDir+sub+'/src/', sub+'/', log )
 
 log.close()
  

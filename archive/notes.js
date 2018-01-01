@@ -592,3 +592,7 @@ sublime ctrl+A, ctrl+shift+I
   To make it dynamic, must use colon :name (shorthand for v-bind:name)
 
 this way, you bind the data:name to the components property
+
+naming props: case sensitive?
+case-senstive names only work in templates which support it (ie single-file templates)
+

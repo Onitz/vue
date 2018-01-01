@@ -90,3 +90,7 @@
 09:42 PM 2018/01/01		001 sweet flusher - main.js
 10:03 PM 2018/01/01		002 sweet flusher - App.vue
 10:03 PM 2018/01/01		002 sweet flusher - main.js
+11:06 PM 2018/01/01		sect8/007 hello
+11:06 PM 2018/01/01		vue-cli/001 hello
+11:07 PM 2018/01/01		sect8/004 flusher flush the dir for me
+11:07 PM 2018/01/01		vue-cli/002 flusher flush the dir for me
