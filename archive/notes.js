@@ -1,6 +1,7 @@
   npm install vue-cli -g
   vue init webpack-simple myProject
 
+https://babeljs.io/learn-es2015/  REALLY GOOD ES6 RESOURCE
 https://github.com/vuejs/vue-cli
   webpack    - A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction.
   webpack    - simple - A simple Webpack + vue-loader setup for quick prototyping.
@@ -477,3 +478,103 @@ div[data-v-3501a3b2]
 </style>/
 das prey cool 
 
+next up: communicating between components
+
+<div id="example">
+  <my-component></my-component>
+</div>
+
+// register
+Vue.component('my-component', {
+  template: '<div>A custom component!</div>'
+})
+
+// create a root instance
+new Vue({
+  el: '#example'
+})
+
+webpack is a module bundler. webpack takes modules with dependencies and generates static assets representing those modules. 
+As websites are evolving into web apps they are relying more and more on JavaScipt
+
+Components: 
+  * All components are also vue instances (and so accept the same options object, ..mostly)
+  * components provide the same lifecycle hooks also (mounted)
+  * w3c considers it good practice to use all-lowercase, hyphenated custom tag names 
+  *
+<table>
+  <my-row>...</my-row>
+</table>
+<table>
+  <tr is="my-row"></tr>
+</table>
+^ because <my-row> is hoisted as an invalid child / out of context, it will error. use is="template-name" to get around this 
+
+  * In Vue, the parent-child component relationship can be summarized as props down, events up. 
+    The parent passes data down to the child via props, and the child sends messages to the parent 
+    via events. Let’s see how they work next.
+  * parent sends data to child via props 
+  * A child component needs to explicitly declare the props it expects to receive using the props option:
+
+Vue.component('child', {
+  // declare the props
+  props: ['message'],
+  // like data, the prop can be used inside templates and
+  // is also made available in the vm as this.message
+  template: '<span>{{ message }}</span>'
+})
+// call with
+<child message="hello!"></child>
+
+  * camelCase vs. kebab-case
+  * single-file templates: separation of concerns is not equal to separation of file types
+  * 'makes the component more cohesive and maintainable.' - Dbsn strongly agrees 
+  * even if you dont like it, you can still leverage hot-reload and pre-compilation features as so:/
+
+<!-- my-component.vue -->
+<template>
+  <div>This will be pre-compiled</div>
+</template>
+<script src="./my-component.js"></script>
+<style src="./my-component.css"></style>
+
+  * dynamic props (parent to child) achived via v-bind 
+<div>
+  <input v-model="parentMsg">
+  <br>
+  <child v-bind:my-message="parentMsg"></child>
+</div>
+<child :my-message="parentMsg"></child>
+
+v-bind:myProperty
+usev-bind without an argument to bind all in obj ie 
+todo: {
+  a: 'hi',
+  b: 'world'
+}
+
+<todo-item v-bind="todo"></todo-item> 
+..is the same as..
+<todo-item
+  v-bind:a="todo.hi"
+  v-bind:b="todo.world">
+</todo-item>
+
+you cant pass down numbers in props, must encapsulate via ajs expression 
+One-way data flow (parent to child)
+
+  * Note that objects and arrays in JavaScript are passed by reference, so if the prop is an array or object, 
+    mutating the object or array itself inside the child will affect parent state.
+
+  * It is possible for a component to specify requirements for the props it is receiving. 
+    If a requirement is not met, Vue will emit warnings. This is especially useful when you are authoring 
+    a component that is intended to be used by others.
+
+  * ok so required in prop is required to prevent vue warnings and has nothing to do with form required lol
+
+Vue uses CUSTOM EVENTS for communicating from child components to parents
+Every Vue instance implements an events interface, which means it can:
+Listen to an event using $on(eventName)
+Trigger an event using $emit(eventName)
+
+slots, v-once (for cheap static components)
