@@ -320,5 +320,13 @@ vue init webpack-simple vue-cli
                                                                             10:32 cli install
 
 vue init webpack-simple 
-
 transpiler (source-to-source compiler: converts one lang to another)
+  ES6 -> ES5 
+
+index.html    what gets served (edited by vuejs)
+              - script src="/dist/build.js" built+transpiled+bundled by webpack 
+package.json  manages dependencies 
+.bablerc      ES6 transpiler 
+App.vue       single-file template 
+webpack.config.js   
+
