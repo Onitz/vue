@@ -578,3 +578,5 @@ Listen to an event using $on(eventName)
 Trigger an event using $emit(eventName)
 
 slots, v-once (for cheap static components)
+
+5:38 break from reading 
