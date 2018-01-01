@@ -100,3 +100,4 @@
 11:35 PM 2018/01/01		sect8/005 no same flush pls
 11:39 PM 2018/01/01		sect8/004 full folder flusher yum
 11:39 PM 2018/01/01		vue-cli/006 full folder flusher yum
+11:43 PM 2018/01/01		sect8/004 component data passing
