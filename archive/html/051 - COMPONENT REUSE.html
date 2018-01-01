@@ -12,6 +12,7 @@
 <script>
 
 // Vue.component kinda creates a new vue instance with a few extra features
+// data in components must be defined as a function, not object
 Vue.component('my-cmp', {
   data: () => ({ 
     status: 'Critical'
