@@ -9,7 +9,7 @@ import sys
 
 log = open('log.txt', 'a')   # open for writing - append mode
 filefrom = 'blankslate.html' # this is assumed in same dir as flush
-fileTarget = '../proj/vue-cli/index.html' # '../index.html' for original
+fileTarget = '../proj/vue-cli/src/App.vue' # '../index.html' for original
 archive  = 'webpack-simple html/' # 'html/'
 fileList = [f for f in listdir(archive) if isfile(join(archive, f))]
 
@@ -30,7 +30,7 @@ title = ''
 soup = BeautifulSoup(open(fileTarget), "html.parser")
 title = soup.title.string
 newFilenameFromHtmlTitle = str(nextno).zfill(3)+' - '+title+'.html'
-newFilenameFromPythonArg = str(nextno).zfill(3)+' - '+sys.argv[1]+'.html'
+newFilenameFromPythonArg = str(nextno).zfill(3)+' - '+sys.argv[1]+'.vue'
 
 if not filecmp.cmp(archive+highestFileName, fileTarget):
   shutil.copy2(fileTarget, archive+newFilenameFromPythonArg)

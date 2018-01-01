@@ -330,3 +330,16 @@ package.json  manages dependencies
 App.vue       single-file template 
 webpack.config.js   
 
+Ways to make a single-file template (special file compiled druing build process)
+  * dont need el property to have our html code converted to a template 
+  * dont have to use template property converted to string template 
+  -> but we can now split out our template and vue code in separate files 
+     and have them compiled to normal javascript
+     (can convert any html to js because there are native js representations)
+main.js
+  render: h => h(App) (es6 arrow function)
+  ^ vue.js passes us the render function h, which we then execute with the App template
+  here we are specifying it as a compiled template, unlike template 'string'^ 
+
+  Vue file has a template, script ..and maybe a style
+export default {}
