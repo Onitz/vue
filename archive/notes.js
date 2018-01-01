@@ -413,3 +413,10 @@ data: () => ({
 })
 
 YOU CANNOT SELF-CLOSE COMPONENT TAGS (<my-cmp/> is a no-no)
+
+Vue.component( 'my-comp', {...}) //registers the component globally
+new Vue({
+  components: {
+    'my-comp': cmp //registers the component locally to instance
+  }
+})
