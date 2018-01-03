@@ -603,3 +603,32 @@ user.name = "aaa" ?
 you can access props as a regular data property 
 
 up to 108, gj (12:01am)
+
+btcmarkets 
+AUD - POLi Payments
+Our POLi deposit service is currently unavailable. 
+We will announce on social media when the service is back available. 
+We recommend using BPAY in the mean time.
+
+
+    props: ['myName'],
+
+    props: [{
+      myName: [String, Array]
+    }],
+
+
+    props: {
+      myName: String
+    },
+
+    props: {
+      myName: {
+        type: Object, 
+        default: function() {
+          return {
+            name: 'Dabson';
+          }
+        }
+      }
+    }
