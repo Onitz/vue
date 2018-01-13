@@ -1,0 +1,569 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"if\tif"
+			],
+			[
+				"tax",
+				"tax37to80kBracket"
+			],
+			[
+				"ro",
+				"deltaRotationQuaternion"
+			],
+			[
+				"cameraP",
+				"cameraPositionLength"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "archive/assignments/Assignment 3 - data sharing/index.html",
+			"settings":
+			{
+				"buffer_size": 426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/Servers.vue",
+			"settings":
+			{
+				"buffer_size": 496,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "archive/notes.js",
+			"settings":
+			{
+				"buffer_size": 21542,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/ServerDetails.vue",
+			"settings":
+			{
+				"buffer_size": 167,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/node.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "browse",
+		"selected_items":
+		[
+			[
+				"browse",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 578.0,
+		"history":
+		[
+			"subprocess.call('vf', 'pass value to compoents')",
+			"import subprocess",
+			"import os",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/F/Dropbox/projects/vue/proj/sect8/src/components/UserDetail.vue",
+		"/F/Dropbox/projects/vue/proj/sect8/src/components/UserEdit.vue",
+		"/F/Dropbox/projects/vue/proj/sect8/src/main.js",
+		"/F/Dropbox/projects/vue/proj/sect8/src/components/User.vue",
+		"/F/Dropbox/projects/vue/index.html",
+		"/F/Dropbox/invest/crypto/better-love-story-than-twilight---kill-9999-student-loans.png",
+		"/F/Dropbox/invest/!prospectus/2018/Investment prospectus 2018.txt",
+		"/F/Dropbox/invest/NET_MOVEMENTS 2018 (tax.txt",
+		"/F/Dropbox/invest/crypto/Im Crazy.txt",
+		"/F/crypto/litecoin/fee_estimates.dat",
+		"/F/Dropbox/invest/crypto/backups/desktop-trumpcoin.dat",
+		"/F/Dropbox/invest/crypto/xIm Crazy.txt",
+		"/F/Dropbox/projects/vue/proj/sect8/src/App.vue",
+		"/F/Dropbox/projects/vue/archive/flush.py",
+		"/F/Dropbox/code/Python/!WORK_EXP 2015 myminify/myMinify-aka_OPTIMISE_IMAGES.py",
+		"/F/Dropbox/code/Python/isFolderAndContentsSame.py",
+		"/C/Users/Andrew/Desktop/folderAndContestSame.py",
+		"/C/Users/Andrew/Desktop/ano/hi.txt",
+		"/C/Users/Andrew/Desktop/a/hi.txt",
+		"/C/Users/Andrew/Desktop/multivarOut.py",
+		"/F/Dropbox/projects/vue/proj/vue-cli/src/App.vue",
+		"/F/Dropbox/projects/vue/proj/vue-cli/src/main.js",
+		"/F/Dropbox/projects/vue/proj/vue-cli/src/ServerStatus.vue",
+		"/F/Dropbox/projects/vue/proj/vue-cli/src/Home.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/007 hix - main.js",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/007 hix - Home.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/007 hix - App.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/006 hix - main.js",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/004 hi - App.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/004 hi - Home.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/004 hi - main.js",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/005 hix - App.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/005 hix - Home.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/005 hix - main.js",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/006 hix - App.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/006 hix - Home.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/008 hix - App.vue",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/008 hix - Home.vue",
+		"/F/Dropbox/projects/vue/proj/vue-cli/node_modules/wordwrap/test/break.js",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/008 hix - main.js",
+		"/F/Dropbox/projects/vue/archive/log.txt",
+		"/F/Dropbox/projects/vue/archive/html/051 - COMPONENT REUSE.html",
+		"/F/Dropbox/projects/vue/archive/blankslate.html",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/001 - basic template.vue",
+		"/F/Dropbox/projects/vue/proj/vue-cli/index.html",
+		"/F/Dropbox/projects/vue/proj/vue-cli/.babelrc",
+		"/F/Dropbox/projects/vue/archive/webpack-simple html/001 - test new flusher 2.html",
+		"/C/Users/Andrew/Desktop/log.txt",
+		"/C/Users/Andrew/Desktop/New Text Document.txt",
+		"/F/Dropbox/invest/PROSPECTUS/Investment prospectus 2018.txt",
+		"/F/Dropbox/invest/metal/net-position.txt",
+		"/F/Dropbox/invest/ag.au/2017.12.31 4.0toz Au/Investment prospectus 2018.txt",
+		"/F/Dropbox/projects/vue/archive/html/044 - manually add properties.html",
+		"/C/Users/Andrew/Desktop/todal",
+		"/F/Dropbox/projects/vue/archive/html/043 - check yoself.html",
+		"/F/Dropbox/projects/vue/archive/html/043 - cmd line.html",
+		"/F/Dropbox/projects/vue/archive/test.py",
+		"/F/Dropbox/projects/vue/archive/python",
+		"/F/Dropbox/projects/vue/archive/html/041 - MONSTER GAME.html",
+		"/F/Dropbox/Andrew/game/legionNotes.txt",
+		"/C/Users/Andrew/Desktop/pic.js",
+		"//wetbox/Web/dabson.co/santa/phatFile.dat",
+		"//wetbox/Web/dabson.co/santa/2016phatFile.dat",
+		"//wetbox/Web/dabson.co/qvalent/assets/js/app.js",
+		"/C/Users/Andrew/Desktop/@=.txt",
+		"/C/Users/Andrew/Desktop/Higher education loan program (HELP) 552 transactions - 21_11_2017.html",
+		"/C/Users/Andrew/Desktop/voon.js",
+		"/C/Users/Andrew/Desktop/out.txt",
+		"/C/Users/Andrew/Desktop/LegendaryProgressTracker.lua",
+		"/C/Users/Andrew/Desktop/wp/src/string.js",
+		"/C/Users/Andrew/Desktop/wp/webpack.config.js",
+		"/C/Users/Andrew/Desktop/wp/webpack-notes.js",
+		"/C/Users/Andrew/Desktop/wp/package.json",
+		"/C/Users/Andrew/Desktop/wp/src/app.js",
+		"/C/Users/Andrew/Desktop/wp/dist/index.html",
+		"/C/Users/Andrew/Desktop/wp/node_modules/.bin/webpack",
+		"/C/Users/Andrew/Desktop/wp/node_modules/.bin/webpack.cmd",
+		"/C/Users/Andrew/Desktop/wp/src/about.js",
+		"/C/Users/Andrew/Desktop/wp/dist/bundle.js",
+		"/F/Dropbox/Andrew/game/2017wow/lego.html",
+		"/F/Dropbox/invest/ag/net-position.txt",
+		"/C/Users/Andrew/Desktop/qv/package.json",
+		"/C/Users/Andrew/Desktop/qv/index.html",
+		"/C/Users/Andrew/Desktop/qv-notes.txt",
+		"/C/Users/Andrew/Desktop/qv/webpack.config.js",
+		"/C/Users/Andrew/Desktop/ar.txt",
+		"/F/Dropbox/Andrew/tax/2017/NET_POSITION.txt",
+		"/F/Dropbox/Andrew/internet+bills/payments recived.txt",
+		"//wetbox/Web/dabson.co/santa/index.php",
+		"//wetbox/Web/dabson.co/santa/.htaccess",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 1 - monster game/css/foundation.min.css",
+		"/F/Dropbox/projects/vue/archive/html/029 - Dynamic styling no class.html",
+		"/F/Dropbox/projects/vue/archive/html/018 - key events + event modifiers.html",
+		"//wetbox/Web/ausestate.co/index.html",
+		"/F/Dropbox/projects/vue/archive/html/026 - css bind color box.html",
+		"/F/Dropbox/projects/vue/archive/html/028 - dynamic css classes.html",
+		"/F/Dropbox/projects/vue/archive/html/027 - computed class selector.html",
+		"/F/Dropbox/projects/vue/archive/html/037 - v-for (value, key) for objs or (value, index) for arrays.html",
+		"/F/Dropbox/projects/vue/archive/html/022 - slightly better way to cross-reference reactive field.html",
+		"/F/Dropbox/projects/vue/archive/html/033 - v-show hides elements, does not work with template tag.html",
+		"/F/Dropbox/projects/vue/archive/html/040 -  v-for button @click= model.push(item).html",
+		"/F/Dropbox/projects/vue/archive/html/030 - Dynamic styling no class 2.html",
+		"/F/Dropbox/projects/vue/archive/html/031 - v-if conditional rendering.html",
+		"/F/Dropbox/projects/vue/archive/html/024 - watch property.html",
+		"/F/Dropbox/projects/vue/archive/html/039 - v-for (value, key, index).html",
+		"/F/Dropbox/projects/vue/archive/html/038 - v-for (value, key, index).html",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 5/index.html",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 5/app.js",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 5/how-to-use.txt",
+		"/F/Dropbox/projects/vue/archive/vue.js",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/index.html",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/styles.css",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/app.js",
+		"/F/Dropbox/projects/vue/archive/html/012 - v-bind attribute.html",
+		"/F/Dropbox/projects/vue/archive/html/002.html",
+		"/F/Dropbox/projects/vue/archive/html/003.html",
+		"/F/Dropbox/projects/vue/archive/html/011.html",
+		"/F/Dropbox/projects/vue/archive/html/019 - evaluate simple js expressions in i-o.html",
+		"/F/Dropbox/projects/vue/archive/html/016 - bind event to data.html",
+		"/F/Dropbox/projects/vue/archive/html/023 - computed.html",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/how-to-use.txt",
+		"/F/Dropbox/projects/vue/archive/html/025 - shorthand.html",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 3/how-to-use.txt",
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 3/app.js",
+		"/F/bitcoin/blockchain/blocks/rev00764.dat",
+		"/F/Dropbox/Andrew/game/2017wow/tos_wa_source.txt",
+		"/F/Dropbox/Andrew/game/2017wow/ToS_wa.txt",
+		"/F/Dropbox/Andrew/game/2017wow/mistress-only.txt"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 391.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@click"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "archive/assignments/Assignment 3 - data sharing/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/Servers.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								401,
+								401
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "archive/notes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21508,
+								21508
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13774.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/ServerDetails.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 133.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 350.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 303.0
+	},
+	"pinned_build_system": "",
+	"project": "vue.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 58.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

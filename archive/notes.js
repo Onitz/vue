@@ -742,3 +742,49 @@ export const eventBus = new Vue({
 
 you can centralise mutators by putting 
 them in the bus (main.js)
+
+loop through each data.servers 
+create a component for server 
+pass id + status to component 
+be able to click this component 
+then have a button that lets you 
+change the status back to normal 
+
+index in 5
+
+  <li class="list-group-item"
+      v-for="(s, index) in servers">
+  Server #{{ s.id }} {{ s.status }} {{ index + 1 }}
+  </li>
+
+  <ServerDetails 
+    :id="s.id"
+    :status="s.status">
+  </ServerDetails>,
+
+    created() {
+      eventBus.$on('ageWasEdited', (age) => {
+        this.userAge = age;
+      });
+    }
+^ hoook in an event listener
+
+@nameWasReset="name = $event"
+
+link event callback: 
+@nameWasReset="name = $event",
+  created() {
+    this.$on('selectedServer', (server) => {
+      this.selectedServer = server;
+      alert('hi' + server.id);
+    });
+  }
+  ^ manual binding callback applies when you have eventBus object 
+
+@nameWasReset="name = $event"
+
+export const eventBus = new Vue({
+  methods: {
+    set
+  }
+});
