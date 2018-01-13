@@ -669,3 +669,16 @@ so now we``re
   * listeneing for it in the child 
 
 And thats how we can pass data from the child to parent
+
+Parent 
+  Child 
+  Child 
+  Child 
+
+Data only flows
+  parent->child  (pass callback as prop)
+  child ->parent (use callback/emit custom event)
+
+
+
+
