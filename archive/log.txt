@@ -103,3 +103,4 @@
 11:43 PM 2018/01/01		sect8/004 component data passing
 12:01 AM 2018/01/02		sect8/005 access props like data
 08:18 PM 2018/01/03		sect8/006 validating props
+11:38 AM 2018/01/13		sect8/007 emit custom events from child to parent (object mutation)

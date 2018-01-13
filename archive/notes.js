@@ -632,3 +632,40 @@ We recommend using BPAY in the mean time.
         }
       }
     }
+
+----- 11:17am start lect 109, perfect window setup
+done parent -> child 
+now doing child -> parent
+
+Keep in mind that objects& arrays are REFERENCE TYPES! 
+so they only exist in memory once, the vars storing them 
+only store a pointer
+
+so if you pass an object or array 
+from the parent to the child component 
+your actually passing the pointer 
+
+  So if you mutate the value in the child, 
+  you mutate it everywhere 
+
+so we need to inform the parent that the name did indeed change 
+we emit a custom event 
+
+components only extend the vue instance 
+we need to define a custom component saying 
+the child property changed 
+
+v-on === @
+
+
+   this.$emit('nameWasReset', this.myName);
+
+<@nameWasReset="name = $event">
+so now it was updated in the user component 
+we can emit custom events from child to parent (object mutation)
+
+so now we``re 
+  * emitting our custom event
+  * listeneing for it in the child 
+
+And thats how we can pass data from the child to parent
