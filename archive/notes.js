@@ -10,6 +10,16 @@ https://github.com/vuejs/vue-cli
   pwa        - PWA template for vue-cli based on the webpack template
   simple     - The simplest possible Vue setup in a single HTML file
 
+
+v-on:click === @click 
+v-bind:href === :href
+
+---------------------
+|   @events                 @click  === v-on:click=...
+|   :attributes             :href   === v-attr:href=...
+---------------------
+
+
 IMPORTING A COMPOENENT
 Main.js
   import Home from './Home.vue'
@@ -156,15 +166,6 @@ computed is preffered cause its caching the result instead of recalculating
 computed: setup the property, then set a function how it should be computed 
 computed is better optimised than watch
 however computed MUST be synchronous, watch can be asynchronous
-
-v-on:click === @click 
-v-bind:href === :href
-
-
----------------------
-|   @events                 @click  === v-on:click=...
-|   :attributes             :href   === v-attr:href=...
----------------------
 
 key: css class, value: condition
 
@@ -679,6 +680,26 @@ Data only flows
   parent->child  (pass callback as prop)
   child ->parent (use callback/emit custom event)
 
+-- 11:43 break (pomodoro)
+   11:52 return
 
+you can also add atributes to pass data between parent & child 
+  -props + custom event 
+  -props + passing callback as a prop 
+    (which executes a method in the parent, 
+    but passing at a prop makes it 
+    executable in the child)
 
+--parent 
+  <app-user-detail 
+          :myName="name" 
+          :resetFn="resetName">
+
+  data.methods.resetName() {
+    this.name = 'Dabs'
+  }
+--child 
+  props: {
+    resetFn: Function
+  }
 
