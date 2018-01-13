@@ -3,8 +3,14 @@
     <app-header></app-header>
     <hr>
     <div class="row">
-      <servers></servers>
-      <app-server-details></app-server-details>
+      <servers
+        @selectServer="selectedServer = $event"> 
+      </servers>
+      <app-server-details
+        :id="selectedServer.id"
+        :status="selectedServer.status"
+        @updateServer="upd">
+      </app-server-details>
     </div>
     <hr>
     <app-footer></app-footer>
@@ -18,6 +24,19 @@
   import ServerDetails from './components/Server/ServerDetails.vue';
 
   export default {
+    data: function() {
+      return {
+        selectedServer: {id: 1, status: 'filler'}
+      }
+    },
+    methods: {
+      upd(serv) {
+        //alert(Servers.servers);
+        //Servers.methods.updateServer(serv.id-1, serv)
+        //console.log(serv.id-1);
+        this.selectedServer = serv;
+      }
+    },
     components: {
       appHeader: Header,
       Servers,

@@ -787,4 +787,77 @@ export const eventBus = new Vue({
   methods: {
     set
   }
-});
+}); 
+
+could go from Sever -> Servers -> App (all with custom events)
+hell use a bus instead 
+//summary of what he did 
+
+Created Server.vue, removed object 
+
+main.js 
+export const serverBus = new Vue()
+
+Server.vue -----
+<li
+  @click="serverSelected">
+    Server #{{ server.id }}
+</li>/
+...
+  import { serverBus } from '../../main'
+  export default {
+    props: ['server'],
+    methods: {
+      serverSelected() {
+        serverBus.$emit('serverSelected', this.server);
+      }
+    }
+  }
+
+Servers.vue -----
+import Server from './Server.vue'
+<app-server 
+  v-for"server in servers" 
+  :server="server">
+<//ap.server>
+...
+components: {
+  appServer: Server //can use with <app-server> in the template
+}
+
+ServerDetails.vue ---
+  <p v-if="!server">Please Select a Server</p>/
+  <p v-else>Server #{{ server.id }} selected, Status: {{ server.status }}</p>/
+  <hr>
+  <button @click="resetStatus">Change to Normal</button>/
+...
+  import { serverBus } from '../../main';
+  export default {
+    data: function() {
+      return {
+        server: null
+      }
+    },
+    methods: {
+      resetStatus() {
+        this.server.status = 'Normal'
+      }
+    },
+    created() {
+      serverBus.$on('serverSelected', (server) => {
+        this.server = server
+      });
+    }
+  }
+
+Summary: 
+  * Servers.servers holds all the server data 
+  * Servers. loops through all servers and passes each server into Server. as a prop 
+  * Server.server is a prop passed in from outside
+  * Make Server. - emits an event 'serverSelected': server 
+  * Make a button in ServerDetails. to update this.data.server.status = 'Normal' 
+  * dont need to pass it back because server is an object (reference type)
+
+ok so Server emits the 'selectedServer' event,
+and ServerDetails has a listener to check on 'serverSelected' 
+then set the ServerDetails.server to Server.server 

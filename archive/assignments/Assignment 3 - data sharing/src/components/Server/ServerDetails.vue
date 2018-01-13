@@ -1,26 +1,28 @@
 <template>
   <div class="col-xs-12 col-sm-6">
-    <p>Server Details are currently not updated</p>
-    <p>Id: {{ id }}</p>
-    <p>Status: {{ status }}</p>
-    <button @click="normalizeServer">Normalize server (failed to update other child)</button>
+    <p v-if="!server">Please select a server</p>
+    <p v-else>Server #{{ server.id }} selected, Status: {{ server.status }}</p> 
+    <hr>
+    <button @click="resetStatus">Change to Normal</button>
   </div>
 </template>
 
 <script>
+  import { serverBus } from '../../main';
   export default {
-    props: {
-      id: Number,
-      status: String
-    },
+    data: () => ({
+      server: null
+    }),
     methods: {
-      normalizeServer() {
-        this.$emit('updateServer', {id:this.id,status:'Normal'});
+      resetStatus() {
+        this.server.status = 'Normal';
       }
+    },
+    created() {
+      serverBus.$on('serverSelected', (server) => {
+        this.server = server;
+      });
     }
-  };
+  }
 </script>
 
-<style>
-
-</style>
