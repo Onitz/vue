@@ -703,3 +703,7 @@ you can also add atributes to pass data between parent & child
     resetFn: Function
   }
 
+<app-user-edit
+  :userAge="age"
+  @ageWasEdited="age = $event">    
+
