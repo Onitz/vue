@@ -725,3 +725,20 @@ we can emit events on different instances
 ie, export eventBus = new Vue(); before defining local vue instance 
 
 vuex: managing state 
+
+-- 12:30 break 
+   12:51 restart
+
+we can put the emit logic in the event bus: 
+export const eventBus = new Vue({
+  methods: {
+    changeAge() {
+      this.$emit('ageWasEdited', age);
+    }
+  }
+});
+  eventBus.$emit('ageWasEdited', this.userAge);
+  eventBus.changeAge(this.userAge);
+
+you can centralise mutators by putting 
+them in the bus (main.js)
