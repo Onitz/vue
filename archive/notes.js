@@ -707,3 +707,21 @@ you can also add atributes to pass data between parent & child
   :userAge="age"
   @ageWasEdited="age = $event">    
 
+central class to store the data (ng2 == services)
+
+main.js ---
+  export const eventBus = new Vue();
+
+userEdit.vue ---
+  import { eventBus } from '../main';
+    data.methods.editAge() {
+      this.userAge = 30;
+      eventBus.$emit('ageWasEdited', this.userAge');
+    }
+
+we can emit events on different instances
+(ie eventBus)
+(we have to create the eventBus before loading all the components)
+ie, export eventBus = new Vue(); before defining local vue instance 
+
+vuex: managing state 

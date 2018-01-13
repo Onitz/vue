@@ -106,3 +106,4 @@
 11:38 AM 2018/01/13		sect8/007 emit custom events from child to parent (object mutation)
 11:59 AM 2018/01/13		sect8/008 child talk to parent with callback prop instead of custom event
 12:09 PM 2018/01/13		sect8/009 sharing data between components
+12:28 PM 2018/01/13		sect8/010 child-to-child data via eventBus
