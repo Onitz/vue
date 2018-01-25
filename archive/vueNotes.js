@@ -1092,4 +1092,49 @@ it has to go:
 likewise with callbacks, you''ll probably have to define 
 the changeServer func at the App level, then pass it down twice 
 as prop Servers > server
+@todo: move repo out of dropbox
 
+---14 vuejs offers us the transition element 
+  * using bootstrap 
+  * you can only animate one component within transition 
+ie no animating list items one at a time 
+vue attaches css classes 
+css.classnames
+
+*-enter {
+  opacity:0;
+} 
+
+*-enter-active  {}
+
+*-leave 
+*-leave-active 
+
+default: v-enter if no name is supplied
+
+<transition name="fade">
+  .fade-enter {}
+  .fade-enter-active {}
+  .fade-leave {}
+  .fade-leave-active {}
+
+.*-enter is removed after 1 frame 
+
+<style>
+/*.v-enmter default*/
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  .fade-leave {
+    /*opacity: 1;*/
+  }
+  .fade-leave-active {
+    transition: opacity 1s;
+    opacity: 0;
+  }
+</style>
+
+css animation property alternative to transitioning 
