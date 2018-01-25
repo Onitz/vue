@@ -1212,3 +1212,6 @@ methods: {
 
 done() allows you to do asynchronous transitions :)
 done() is not neccessary if using css animaitons 
+
+if done is ommited, afterEnter / afterLeave wont execute
+:css="false" (transition attribute) means "dont check for css classes"
