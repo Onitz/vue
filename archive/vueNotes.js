@@ -1135,6 +1135,27 @@ default: v-enter if no name is supplied
     transition: opacity 1s;
     opacity: 0;
   }
-</style>
+</style>/
 
 css animation property alternative to transitioning 
+good 
+
+enter
+enter-active 
+leave 
+leave-active 
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(20px);  
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+.slide-enter-active {
+  animation: slide-in 1s ease-out forwards;
+}
+
+we need FORWARDS so the animation stays in the final position 
