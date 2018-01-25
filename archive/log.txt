@@ -127,3 +127,4 @@
 10:34 AM 2018/01/26		sect14 animations/010 transition hooks
 10:38 AM 2018/01/26		sect14 animations/011 enter and leave transition hooks alos have done function arg
 10:41 AM 2018/01/26		sect14 animations/012 css=false for skipping css check
+10:56 AM 2018/01/26		sect14 animations/013 pure js transitions
