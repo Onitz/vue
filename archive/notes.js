@@ -861,3 +861,42 @@ Summary:
 ok so Server emits the 'selectedServer' event,
 and ServerDetails has a listener to check on 'serverSelected' 
 then set the ServerDetails.server to Server.server 
+117 @ 4:24 
+
+Andrew PATH
+  C:\Users\Andrew\AppData\Roaming\npm
+
+System NODE_PATH
+  %AppData%\npm\node_modules
+System Path 
+  C:\PROGRA~1\nodejs\
+
+me thinks you need to add NODE_PATH to PATH
+which http-server 
+c/Users/Andrew/AppData/Roaming/npm/http-server
+ohhh, so the vue command is vue (not vue-cli, that just allows you to run it lol)
+webcack has a cli with no explicit *-cli folder
+
+  vue init webpack-simple vue-cli       //lists all the dependencies in package.json, still need to run npm install to download
+
+babel is a transpiler (es6->es5)
+webpack-simple comes with a .gitignore
+we use webpack to build our files 
+output lives in /dist/build.js by default 
+it''l get bundled from multiple files into one
+
+you dont see /dist/build.js because in development mode,
+its all created in memory 
+webpack.config.js helps us 
+
+src/main.js is the first file that gets executed
+export name app
+🔥🔥🔥🔥🔥🔥🔥🔥
+https://emojipedia.org/fire/
+
+npm run dev 
+npm run build
+
+vuejs:  single-template files
+        super-power 
+

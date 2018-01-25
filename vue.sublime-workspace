@@ -23,40 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "archive/assignments/Assignment 3 - data sharing/index.html",
-			"settings":
-			{
-				"buffer_size": 426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/Servers.vue",
-			"settings":
-			{
-				"buffer_size": 496,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "archive/notes.js",
-			"settings":
-			{
-				"buffer_size": 21542,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/ServerDetails.vue",
-			"settings":
-			{
-				"buffer_size": 167,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -162,9 +128,28 @@
 	},
 	"expanded_folders":
 	[
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/components",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/components/Server"
 	],
 	"file_history":
 	[
+		"/F/Dropbox/projects/vue/archive/notes.js",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/main.js",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/components/Server/ServerDetails.vue",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/components/Server/Servers.vue",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/components/Server/Server.vue",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/src/App.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/010 child-to-child data via eventBus/components/UserDetail.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/008 child talk to parent with callback prop instead of custom event/components/User.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/008 child talk to parent with callback prop instead of custom event/components/UserDetail.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/009 sharing data between components/components/UserDetail.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/009 sharing data between components/components/UserEdit.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/009 sharing data between components/App.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/009 sharing data between components/components/User.vue",
+		"/F/Dropbox/projects/vue/archive/sect8/009 sharing data between components/main.js",
+		"/F/Dropbox/projects/vue/archive/assignments/Assignment 3 - data sharing/index.html",
 		"/F/Dropbox/projects/vue/proj/sect8/src/components/UserDetail.vue",
 		"/F/Dropbox/projects/vue/proj/sect8/src/components/UserEdit.vue",
 		"/F/Dropbox/projects/vue/proj/sect8/src/main.js",
@@ -277,22 +262,7 @@
 		"/F/Dropbox/projects/vue/archive/vue.js",
 		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/index.html",
 		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/styles.css",
-		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/app.js",
-		"/F/Dropbox/projects/vue/archive/html/012 - v-bind attribute.html",
-		"/F/Dropbox/projects/vue/archive/html/002.html",
-		"/F/Dropbox/projects/vue/archive/html/003.html",
-		"/F/Dropbox/projects/vue/archive/html/011.html",
-		"/F/Dropbox/projects/vue/archive/html/019 - evaluate simple js expressions in i-o.html",
-		"/F/Dropbox/projects/vue/archive/html/016 - bind event to data.html",
-		"/F/Dropbox/projects/vue/archive/html/023 - computed.html",
-		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/how-to-use.txt",
-		"/F/Dropbox/projects/vue/archive/html/025 - shorthand.html",
-		"/F/Dropbox/projects/vue/archive/assignments/Exercise 3/how-to-use.txt",
-		"/F/Dropbox/projects/vue/archive/assignments/Exercise 3/app.js",
-		"/F/bitcoin/blockchain/blocks/rev00764.dat",
-		"/F/Dropbox/Andrew/game/2017wow/tos_wa_source.txt",
-		"/F/Dropbox/Andrew/game/2017wow/ToS_wa.txt",
-		"/F/Dropbox/Andrew/game/2017wow/mistress-only.txt"
+		"/F/Dropbox/projects/vue/archive/assignments/Exercise 4/app.js"
 	],
 	"find":
 	{
@@ -310,6 +280,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"() =>",
+			"const",
+			"status",
+			"props:",
 			"@click"
 		],
 		"highlight": true,
@@ -328,143 +302,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "archive/assignments/Assignment 3 - data sharing/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 426,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/Servers.vue",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 496,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								401,
-								401
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 2,
-					"file": "archive/notes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21508,
-								21508
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 13774.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "archive/assignments/Assignment 3 - data sharing/src/components/Server/ServerDetails.vue",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 167,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -496,7 +340,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.428738151431,
 			1.0
 		],
 		"rows":
@@ -552,7 +396,7 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
