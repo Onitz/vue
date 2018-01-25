@@ -115,11 +115,12 @@ if not filecmp.cmp(htmlArchive+highestFileNameHtml, htmlTarget):
 
 #check all proj/ subdirs and copy src/*.vue and src/*.js if there's been changes
 for sub in get_immediate_subdirectories(projDir):
+  print 'Shadowing '+projDir+sub
   if not os.path.exists(sub):
     os.makedirs(sub)
   nextNoVue, highestFileNameVue = getNextNo(sub)
-  #copySrcDirIfDifferent(projDir+sub+'/src/', sub+'/', log )
-  copySrcDirIfDifferent(projDir+sub+'/', sub+'/', log )
+  #copySrcIfDifferent(projDir+sub+'/src/', sub+'/', nextNoVue, log)
+  copySrcDirIfDifferent(projDir+sub+'/src/', sub+'/', log )
 
 log.close()
  

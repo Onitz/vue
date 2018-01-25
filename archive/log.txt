@@ -114,3 +114,6 @@
 07:35 AM 2018/01/26		sect6/002 testcopy
 07:35 AM 2018/01/26		sect7/002 testcopy
 07:36 AM 2018/01/26		sect8/012 testcopy
+07:45 AM 2018/01/26		vue-cli/009 hello
+07:52 AM 2018/01/26		sect14 animations/002 animee
+07:52 AM 2018/01/26		vue-cli/007 animee
