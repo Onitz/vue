@@ -1049,3 +1049,18 @@ i would argue my ways less code (yay god object)
 ..but i would also like to appreciate the potential of 
 emitting and handling custom events :))
 
+attempt5 eventbus listening + leave data in servers
+remember, eventbus is a NAMED EXPORT (must surround in curleys)
+
+named import/export
+  export const eventBus = new Vue();
+  import { serverBus } from '../../main';
+
+Importing components
+  <!--
+  <li
+  class="list-group-item"
+  v-for="index in 5">
+  Server #{{ index }}
+</li>
+-->
