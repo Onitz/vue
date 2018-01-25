@@ -1188,3 +1188,16 @@ Multiple child components require v-if (not v-show)
   in-out (opposite)
 
 between 2 unique keys, and mode, we get to transition between 2 elements
+
+vue JS Transition hooks (transition emits some events):
+  before-enter
+  enter 
+  after-enter 
+  after-enter-cancelled 
+  before-leave 
+  leave 
+  after-leave 
+  after-leave-cancelled 
+
+^ you can use these hooks to do animations purely through js
+
