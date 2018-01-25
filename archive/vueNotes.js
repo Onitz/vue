@@ -850,14 +850,6 @@ ServerDetails.vue ---
     }
   }
 
-Summary: 
-  * Servers.servers holds all the server data 
-  * Servers. loops through all servers and passes each server into Server. as a prop 
-  * Server.server is a prop passed in from outside
-  * Make Server. - emits an event 'serverSelected': server 
-  * Make a button in ServerDetails. to update this.data.server.status = 'Normal' 
-  * dont need to pass it back because server is an object (reference type)
-
 ok so Server emits the 'selectedServer' event,
 and ServerDetails has a listener to check on 'serverSelected' 
 then set the ServerDetails.server to Server.server 
@@ -891,12 +883,169 @@ webpack.config.js helps us
 
 src/main.js is the first file that gets executed
 export name app
-🔥🔥🔥🔥🔥🔥🔥🔥
+🔥🔥🔥🔥 🔥🔥🔥🔥
+🔥🔥🔥🔥 🔥🔥🔥🔥
+🔥🔥🔥🔥 🔥🔥🔥🔥
+🔥🔥🔥🔥 🔥🔥🔥🔥
 https://emojipedia.org/fire/
 
 npm run dev 
 npm run build
 
-vuejs:  single-template files
-        super-power 
+  vuejs:  single-template files
+          super-power 
+  os.path.dirname(os.path.realpath(__file__))
+  os.path.dirname(os.path.realpath('.')
+
+'C:\\Users\\Andrew\\AppData\\Roaming\\Sublime Text 3'
+C:\Users\Andrew\AppData\Roaming\Sublime Text 3\Packages
+
+C:\Users\Andrew\AppData\Roaming\Sublime Text 3\Packages
+sublime.log_commands(True)
+package.zip > Main.sublime-menu describes all the commands
+  {"keys": ["ctrl+1"], "command": "favorite_files_open"},
+  {"keys": ["ctrl+2"], "command": "favorite_files_add"}
+
+5.5Gb free
+
+Summary: 
+  * Servers.servers holds all the server data 
+  * Servers. loops through all servers and passes each server into Server. as a prop 
+  * Server.server is a prop passed in from outside
+  * Make Server. - emits an event 'serverSelected': server 
+  * Make a button in ServerDetails. to update this.data.server.status = 'Normal' 
+  * dont need to pass it back because server is an object (reference type)
+
+J E S T 
+
+summary instruction; 
+  Servers.vue: create an array of objects, pass the id of each server into each ServerDetails component 
+  ServersDetails.vue has a button to change the status, 
+    but the data item is stored in Servers.vue
+pass id + status to list item 
+
+replace li with component
+  - pass status to that 
+  - be able to click the item 
+
+  Server  #1 :: Normal                  Server #1 selected, Status: Normal
+
+you know what, i want all my data in a central location,
+therefore, im going to move servers to eventBus
+
+please select a server
+oh hey, kick ass, it auto-icnrements the prot number  
+so the issue isnt that you cant run 2 webpack instances,
+its more likely that you cant run 2 webpack instances with the same id / name (makes sense)
+
+
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        v-for="index in 5">
+        Server #{{ index }}
+      </li>
+    </ul>
+
+import { serverBus } from '../../main'
+
+
+serverBus.$emit('serverSelected', this.server);
+
+you emit to the serverBus, and listen props from the serverBus
+YOU GOTTA EXPORT THE EVENTBUS 
+export const eventBus = new Vue({...});
+
+code folding ctrl+shift+ [ or ]
+prey cool
+
+,
+    mounted() {
+      console.log('ev bu');
+      console.log(eventBus);
+      console.log(eventBus.server);
+    }
+    /*
+    data: function() {
+      return {
+        servers: [
+          { id: 1, status: 'Normal'},
+          { id: 2, status: 'Critical'},
+          { id: 3, status: 'Unknown'},
+          { id: 4, status: 'Normal'}
+        ]
+      };
+    }
+  */
+
+
+  import Server from './Server.vue';
+  import { eventBus } from '../../main';
+
+    components: {
+      Server
+    },
+
+IMPORT VUE FILES WITHOUT EXT:
+extensions: ['*', '.js', 'vue', 'json']
+=>
+extensions: ['*', '.js', '.vue', '.json']
+
+HOW TO IMPORT VUE FILES WITHOUT THE VUE EXTENSION
+WEBPACK CONFIG module.exports ={
+  resolve: {
+    extensions: ['*', '.js', '.json', '.vue'],
+  }
+}
+
+can now do 
+  import Server from './Server'
+instead of 
+  import Server from './Server.js'
+
+
+body{
+  background-color:#fee;
+}
+
+oohhhhh i see why its working,
+so because you set selectedServer to the whole object,
+youve actually just got a REFERENCE to the actual object 
+which resides in the list 
+thats so sexy ;)
+
+you dont even need to diddle with custom events 
+just mutate the data directly on the eventbus 
+cool? 
+
+you''re really just using eventBus as a shared dataStore 
+instead of an event bus.
+but like why emit events in this case .......
+
+2 ways: pass in handler, or emit event and handlee
+
+how you handled it: 
+  have selectedServer reference in shared data store 
+
+how he handled it: 
+  emit 'serverSelected' to eventBus, 
+  then listen for it in serverDetails with:
+
+EMIT(Server.vue)
+  methods: {
+    serverSelected() {
+      serverBus.$emit('serverSelected', this.server);
+    }
+  }
+
+HANDLE (serverDetails.vue)
+  created() {
+    serverBus.$on('serverSelected', (server) => {
+      this.server = server;
+    });
+  }
+
+i would argue my ways less code (yay god object)
+..but i would also like to appreciate the potential of 
+emitting and handling custom events :))
 
