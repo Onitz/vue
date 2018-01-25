@@ -1172,3 +1172,5 @@ dictate which one sets the length
 
 v-if   (adds/removes elements)
 v-show (only triggers the display property)
+
+APPEAR    add initial transition to the dom

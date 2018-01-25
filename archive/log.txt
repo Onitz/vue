@@ -120,3 +120,4 @@
 07:53 AM 2018/01/26		sect14 animations/003 fade transition copy
 08:16 AM 2018/01/26		sect14 animations/004 css animation
 09:17 AM 2018/01/26		sect14 animations/005 define transition type when mixing transitions & animations
+09:25 AM 2018/01/26		sect14 animations/006 initial load animation with appear attribute
