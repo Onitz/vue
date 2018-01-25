@@ -1176,3 +1176,15 @@ v-show (only triggers the display property)
 APPEAR    add initial transition to the dom
 
 Animate.css for funky little animations
+
+Multiple child components require v-if (not v-show)
+  <transition :name="alertAnimation">
+    <div v-if="show" class="alert alert-info">This is some info</div>
+    <div v-if="!show" class="alert alert-warning">This is some Warning</div>
+  </transition>
+
+@mode:
+  out-in let the old element go out first,then go in the new one 
+  in-out (opposite)
+
+between 2 unique keys, and mode, we get to transition between 2 elements
