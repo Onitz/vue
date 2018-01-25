@@ -125,3 +125,4 @@
 09:49 AM 2018/01/26		sect14 animations/008 bind transition type to var
 09:59 AM 2018/01/26		sect14 animations/009 animate between 2 elements key key mode=out-in
 10:34 AM 2018/01/26		sect14 animations/010 transition hooks
+10:38 AM 2018/01/26		sect14 animations/011 enter and leave transition hooks alos have done function arg

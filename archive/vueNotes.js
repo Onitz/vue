@@ -1203,3 +1203,12 @@ vue JS Transition hooks (transition emits some events):
 https://daneden.github.io/animate.css/
 
 you can use all these hooks on css animations as well 
+
+methods: {
+  enter(el, done) {
+    console.log('enter');
+    done(); //needed to tell vue its done, else vue infers this from timing on transition property
+  },
+
+done() allows you to do asynchronous transitions :)
+done() is not neccessary if using css animaitons 
