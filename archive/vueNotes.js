@@ -1200,4 +1200,6 @@ vue JS Transition hooks (transition emits some events):
   after-leave-cancelled 
 
 ^ you can use these hooks to do animations purely through js
+https://daneden.github.io/animate.css/
 
+you can use all these hooks on css animations as well 
