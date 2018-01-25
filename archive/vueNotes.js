@@ -1064,3 +1064,32 @@ Importing components
   Server #{{ index }}
 </li>
 -->
+
+so emititing to this. was likely just a fruitless demo to show emission/handling 
+if you could do this.$emit between components, why not just access this.data 
+children do not have access to paraent properties, unless passed in as props. 
+parents do not have access to child properties unles caught with emit?
+i swear he emitted to this with a bus 
+perhaps it was combination of passing through a funciton and this
+
+YES! YOU CAN EMIT TO THIS, JUST REMEMBER TO BIND handler to component 
+
+<component @customeEvent="handle"></component
+
+its a bit nasty when your tree looks like this 
+
+App 
+  ServerDetails 
+  Servers 
+    Server
+
+if server wants to send an emit to serverDetails,
+it has to go:
+  (up to servers)
+  (up to App)
+  (down to serverDetails)
+
+likewise with callbacks, you''ll probably have to define 
+the changeServer func at the App level, then pass it down twice 
+as prop Servers > server
+
