@@ -118,8 +118,8 @@ for sub in get_immediate_subdirectories(projDir):
   if not os.path.exists(sub):
     os.makedirs(sub)
   nextNoVue, highestFileNameVue = getNextNo(sub)
-  #copySrcIfDifferent(projDir+sub+'/src/', sub+'/', nextNoVue, log)
-  copySrcDirIfDifferent(projDir+sub+'/src/', sub+'/', log )
+  #copySrcDirIfDifferent(projDir+sub+'/src/', sub+'/', log )
+  copySrcDirIfDifferent(projDir+sub+'/', sub+'/', log )
 
 log.close()
  
