@@ -1159,3 +1159,16 @@ leave-active
 }
 
 we need FORWARDS so the animation stays in the final position 
+you could put poacity in transition or css @keyframes
+
+type="animation"
+type="transition"
+
+^ selects which animation/transition length to use
+
+So if you mix animation & transition, 
+ensure you set the transition TYPE to 
+dictate which one sets the length 
+
+v-if   (adds/removes elements)
+v-show (only triggers the display property)
