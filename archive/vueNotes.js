@@ -1324,7 +1324,12 @@ create a global diretive called highlight
   4. componentUpdated (el, binding, vnode, oldVnode)   > once component is updated (with children)
   5. unbind           (el, binding, vnode)             > once directive is removed
 
-bind + update used most often
+bind + update used most often:{}
+bind(el, binding, vnode)
+  directive (v-highlight)   directives: { 'local-highlight': {} }
+  arguments (:background)   binding.arg=='background'
+  modifiers (.delayed)      binding.modifiers['delayed']
+  values    'red'
 
 Vue.directive('highlight', {
   bind(el, binding, vnode) {
@@ -1354,11 +1359,6 @@ Vue.directive('highlight', {
   }
 <p v-highlight:background.delayed="'red'">Color this</p>
 
-bind(el, binding, vnode)
-  directive (v-highlight)  directives: { 'local-highlight': {} }
-  arguments (:background)   binding.arg=='background'
-  modifiers (.delayed)      binding.modifiers['delayed']
-  values    'red'
 
 can pass in objects to vue directives 
  <p v-local-highlight:background.delayed.blink
@@ -1366,3 +1366,12 @@ can pass in objects to vue directives
 
 ^ you can access the main color via 
 binding.value.mainColor
+
+              @click="" 
+                                    short for 
+              v-on:click=""
+
+bind(el,binding,vnode) 
+
+binding.value.mainColor   // ="{mainColor:red}"
+binding.arg               // :background
