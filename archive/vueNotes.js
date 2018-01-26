@@ -1230,3 +1230,6 @@ vuejs will always use transfomrm
   (translateY translateX) 
 when moving components 
 
+forms --------------------------
+v-model=".." to hook up vue var to <input>
+normal 2-way data binding with forms 
