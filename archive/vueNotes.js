@@ -1285,3 +1285,11 @@ v-model behinds the scenes:
   @input="userData.email = $event.target.value">
   //<!-- :value+@input equivilant to v-model="userData.email" -->
 
+so when defining your own custom input components,
+you need to 
+  * setup a value prop in your component
+  * emit an @input event (and/or .change for lazy) this.$emit('input', isOn);
+
+(be careful, switch is a reserved keyword)
+although emiting 'input' is sufficient for * and *.lazy at least for bools
+
