@@ -1293,3 +1293,5 @@ you need to
 (be careful, switch is a reserved keyword)
 although emiting 'input' is sufficient for * and *.lazy at least for bools
 
+if you''ve got a button in a form element, it will by default submit it 
+@click.prevent="submit"

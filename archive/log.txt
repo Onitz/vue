@@ -140,3 +140,4 @@
 10:56 PM 2018/01/26		sect11 forms/006 autogen select input options
 11:03 PM 2018/01/26		sect11 forms/007 equiv to v-model
 11:28 PM 2018/01/26		sect11 forms/008 custom components
+11:35 PM 2018/01/26		sect11 forms/009 @click.prevent=submitHandler
