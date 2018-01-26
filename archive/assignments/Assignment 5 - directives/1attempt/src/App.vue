@@ -17,7 +17,7 @@ export default {
     myon: {
       bind(el, binding, vnode) {
         el.addEventListener(binding.arg, e => {
-          binding.value();
+          binding.value(e);
         });
         /*
         is $on just for Vue objects?
