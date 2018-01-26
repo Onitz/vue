@@ -1295,3 +1295,17 @@ although emiting 'input' is sufficient for * and *.lazy at least for bools
 
 if you''ve got a button in a form element, it will by default submit it 
 @click.prevent="submit"
+
+bootstrap class: 
+<div class="form-group"></div>
+
+!IMPORTANT:
+dont name your props the same 
+as the v-model="..." your passing in !!!!!!! (will appear as undefined in your child component)
+
+oohhhh, so we're taking the literal :value attibute (dictaed by v-model) it seems of the prop and using that.........
+weird.
+
+1.handle a prop 
+2.manage a value
+3.emit an 'input' event
