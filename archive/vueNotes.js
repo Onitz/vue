@@ -1311,3 +1311,46 @@ weird.
 3.emit an 'input' event
 
 You can write your own custom directives! (v-xyz)
+
+Vue.directive('highlight');
+
+create a global diretive called highlight 
+// v-highlight
+
+5 directive hooks:
+  1. bind             (el, binding, vnode)             > once directive is attached (binding + vnode should be treated as readonly)
+  2. inserted         (el, binding, vnode)             > inserted in the parent node
+  3. update           (el, binding, vnode, oldVnode)   > once component is updated (without children)
+  4. componentUpdated (el, binding, vnode, oldVnode)   > once component is updated (with children)
+  5. unbind           (el, binding, vnode)             > once directive is removed
+
+bind + update used most often
+
+Vue.directive('highlight', {
+  bind(el, binding, vnode) {
+    el.style.backgroundColor = 'green';
+  }
+});
+<p v-highlight>Color this</p>
+
+need to refresh binding, webpack has issues hot-reloading it 
+i am leet.
+
+the following lets us use arguments and values 
+Vue.directive('highlight', {
+  bind(el, binding, vnode) {
+    // el.style.backgroundColor = binding.value;
+    if(binding.arg=='background') {
+      el.style.backgroundColor = binding.value;
+    } else {
+      el.style.color = binding.value;
+    }
+  }
+});
+
+<p v-highlight="'red'">Color this</p>
+<p v-highlight:background="'red'">Color this</p/>
+
+arguments 
+values 
+modifiers 
