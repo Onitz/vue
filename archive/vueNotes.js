@@ -1233,3 +1233,13 @@ when moving components
 forms --------------------------
 v-model=".." to hook up vue var to <input>
 normal 2-way data binding with forms 
+
+<input v-model="userData.password"
+^default, updates on change 
+
+<input v-model.lazy="userData.password"
+^only updates on focusOut
+
+.trim
+.number
+(other modifiers you can use)
