@@ -1246,3 +1246,9 @@ normal 2-way data binding with forms
 
 putting number will just parse as number 
 it wont stop you entering alpha chars
+
+(bootstrap) checkbox imports are setup inside of label
+(increases click area)
+
+you can bind 2 inputs models to the same array!
+itll merge it into the same array var 

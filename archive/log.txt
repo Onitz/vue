@@ -136,3 +136,4 @@
 10:19 PM 2018/01/26		sect11 forms/002 binding inputs to model vars
 10:25 PM 2018/01/26		sect11 forms/003 v-model.lazy
 10:36 PM 2018/01/26		sect11 forms/004 forms and textarea
+10:42 PM 2018/01/26		sect11 forms/005 multiple v-model bindings to same data array
