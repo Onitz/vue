@@ -128,3 +128,4 @@
 10:38 AM 2018/01/26		sect14 animations/011 enter and leave transition hooks alos have done function arg
 10:41 AM 2018/01/26		sect14 animations/012 css=false for skipping css check
 10:56 AM 2018/01/26		sect14 animations/013 pure js transitions
+11:05 AM 2018/01/26		sect14 animations/014 import DangerAlert from '.slashDangerAlert.vue';
