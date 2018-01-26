@@ -1215,6 +1215,6 @@ done() is not neccessary if using css animaitons
 
 if done is ommited, afterEnter / afterLeave wont execute
 :css="false" (transition attribute) means "dont check for css classes"
-
-
 transition between dynamic components, woo 
+<transition-group> for multiple items 
+

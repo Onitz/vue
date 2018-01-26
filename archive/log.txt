@@ -130,3 +130,4 @@
 10:56 AM 2018/01/26		sect14 animations/013 pure js transitions
 11:05 AM 2018/01/26		sect14 animations/014 import DangerAlert from '.slashDangerAlert.vue';
 11:22 AM 2018/01/26		sect14 animations/015 animate dynamic components
+11:51 AM 2018/01/26		sect14 animations/016 setup list
