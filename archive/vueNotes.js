@@ -1311,4 +1311,3 @@ weird.
 3.emit an 'input' event
 
 You can write your own custom directives! (v-xyz)
-

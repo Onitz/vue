@@ -142,3 +142,4 @@
 11:28 PM 2018/01/26		sect11 forms/008 custom components
 11:35 PM 2018/01/26		sect11 forms/009 @click.prevent=submitHandler
 12:48 AM 2018/01/27		sect12 directives/001 sect 12 directives init
+08:43 AM 2018/01/27		sect12 directives/002 defining Vue.directive('highlight')
