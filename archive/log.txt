@@ -131,3 +131,4 @@
 11:05 AM 2018/01/26		sect14 animations/014 import DangerAlert from '.slashDangerAlert.vue';
 11:22 AM 2018/01/26		sect14 animations/015 animate dynamic components
 11:51 AM 2018/01/26		sect14 animations/016 setup list
+12:04 PM 2018/01/26		sect14 animations/017 juicy animated list items

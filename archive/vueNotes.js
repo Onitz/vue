@@ -1218,3 +1218,15 @@ if done is ommited, afterEnter / afterLeave wont execute
 transition between dynamic components, woo 
 <transition-group> for multiple items 
 
+use transition-group just like transtion
+you Always have to key the elements in transition-group
+transition-group gives us access to a new css class 
+
+  .*-move {
+
+  }
+
+vuejs will always use transfomrm
+  (translateY translateX) 
+when moving components 
+
