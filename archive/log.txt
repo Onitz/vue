@@ -144,3 +144,4 @@
 12:48 AM 2018/01/27		sect12 directives/001 sect 12 directives init
 08:43 AM 2018/01/27		sect12 directives/002 defining Vue.directive('highlight')
 08:58 AM 2018/01/27		sect12 directives/003 directive arguments
+09:07 AM 2018/01/27		sect12 directives/004 local directive

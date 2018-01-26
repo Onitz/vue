@@ -1335,22 +1335,26 @@ Vue.directive('highlight', {
 
 need to refresh binding, webpack has issues hot-reloading it 
 i am leet.
+(global directive defined in main.js before the new Vue(..))
 
-the following lets us use arguments and values 
 Vue.directive('highlight', {
   bind(el, binding, vnode) {
     // el.style.backgroundColor = binding.value;
-    if(binding.arg=='background') {
-      el.style.backgroundColor = binding.value;
-    } else {
-      el.style.color = binding.value;
+    var delay = 0;
+    if(binding.modifiers['delayed']) {
+      delay = 3000;
     }
+    setTimeout(()=>{
+      if(binding.arg=='background') {
+        el.style.backgroundColor = binding.value;
+      } else {
+        el.style.color = binding.value;
+      }      
+    }, delay)
   }
-});
+<p v-highlight:background.delayed="'red'">Color this</p>
 
-<p v-highlight="'red'">Color this</p>
-<p v-highlight:background="'red'">Color this</p/>
-
-arguments 
-values 
-modifiers 
+directive (v-highlight)
+arguments (:background)
+modifiers (.delayed)
+values    'red'
