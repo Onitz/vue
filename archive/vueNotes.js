@@ -1272,3 +1272,16 @@ YOU CAN SELECT DEFAULT PROPERTY
 
 ^if you bind it to model, you dont need :value="priority" !
 it``ll just accept the value as part of the vue var
+
+
+v-model behinds the scenes:
+  1. binds to the value with :value aka v-bind:value
+  2. gives us the @input listeneer or @change for v-model.lazy modifier
+    @input="userData.email = $event.target.value"
+
+
+<input
+  :value="userData.email"
+  @input="userData.email = $event.target.value">
+  //<!-- :value+@input equivilant to v-model="userData.email" -->
+

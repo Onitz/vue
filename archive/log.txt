@@ -138,3 +138,4 @@
 10:36 PM 2018/01/26		sect11 forms/004 forms and textarea
 10:42 PM 2018/01/26		sect11 forms/005 multiple v-model bindings to same data array
 10:56 PM 2018/01/26		sect11 forms/006 autogen select input options
+11:03 PM 2018/01/26		sect11 forms/007 equiv to v-model
