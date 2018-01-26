@@ -1309,3 +1309,6 @@ weird.
 1.handle a prop 
 2.manage a value
 3.emit an 'input' event
+
+You can write your own custom directives! (v-xyz)
+
