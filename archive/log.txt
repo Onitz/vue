@@ -145,3 +145,4 @@
 08:43 AM 2018/01/27		sect12 directives/002 defining Vue.directive('highlight')
 08:58 AM 2018/01/27		sect12 directives/003 directive arguments
 09:07 AM 2018/01/27		sect12 directives/004 local directive
+09:16 AM 2018/01/27		sect12 directives/005 extra modifiers

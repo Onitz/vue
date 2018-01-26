@@ -1354,7 +1354,8 @@ Vue.directive('highlight', {
   }
 <p v-highlight:background.delayed="'red'">Color this</p>
 
-directive (v-highlight)
-arguments (:background)
-modifiers (.delayed)
-values    'red'
+bind(el, binding, vnode)
+  directive (v-highlight)  directives: { 'local-highlight': {} }
+  arguments (:background)   binding.arg=='background'
+  modifiers (.delayed)      binding.modifiers['delayed']
+  values    'red'
