@@ -1331,7 +1331,7 @@ Vue.directive('highlight', {
     el.style.backgroundColor = 'green';
   }
 });
-<p v-highlight>Color this</p>
+<p v-highlight>Color this<//p>
 
 need to refresh binding, webpack has issues hot-reloading it 
 i am leet.
@@ -1359,3 +1359,10 @@ bind(el, binding, vnode)
   arguments (:background)   binding.arg=='background'
   modifiers (.delayed)      binding.modifiers['delayed']
   values    'red'
+
+can pass in objects to vue directives 
+ <p v-local-highlight:background.delayed.blink
+      ="{mainColor: 'red', secondColor: 'green', delay: 500}">Color this too</p>
+
+^ you can access the main color via 
+binding.value.mainColor
