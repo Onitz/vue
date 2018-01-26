@@ -1243,3 +1243,6 @@ normal 2-way data binding with forms
 .trim
 .number
 (other modifiers you can use)
+
+putting number will just parse as number 
+it wont stop you entering alpha chars
