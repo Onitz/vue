@@ -1250,5 +1250,25 @@ it wont stop you entering alpha chars
 (bootstrap) checkbox imports are setup inside of label
 (increases click area)
 
-you can bind 2 inputs models to the same array!
+you can bind 2 checkbox inputs models to the same array!
 itll merge it into the same array var 
+
+binding multiple radio inputs to the same string 
+lets only one be selectable from the group :)
+
+you can auto spawn select elements from aray via simple v-for
+YOU CAN SELECT DEFAULT PROPERTY 
+<option v-for="priority in priorities" :selected="priority='Medium'"><option v-for="priority in priorities" :value="priority" :selected="priority='Medium'">
+
+  <select
+    id="priority"
+    class="form-control"
+    v-model="selectedPriority">
+    <option 
+      v-for="priority in priorities" 
+      :selected="priority=='Medium'">{{ priority }}</option>
+  </select>
+  v-model bind overrides the :selected=... logic!!!
+
+^if you bind it to model, you dont need :value="priority" !
+it``ll just accept the value as part of the vue var
