@@ -1470,3 +1470,15 @@ globalMixin created hook gets executed:
   * App.vue render
   * List.vue component lifecycle hook 
 
+the fruitmixin,
+when included twice 
+is not shared.
+
+^ its safe to access + manip data 
+without breaking it 
+
+you can access mixin fields: 
+  fruitMixin.field
+
+mixin gets copied, without influencing other 
+mixin of the same type 

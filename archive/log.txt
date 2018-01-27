@@ -155,3 +155,4 @@
 12:34 PM 2018/01/27		sect13 filters mixins/005 mixins
 12:39 PM 2018/01/27		sect13 filters mixins/006 mixin hooks get called before component hooks
 12:48 PM 2018/01/27		sect13 filters mixins/007 global mixins
+12:53 PM 2018/01/27		sect13 filters mixins/008 mixin notes
