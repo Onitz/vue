@@ -1461,4 +1461,12 @@ reusable code snippets across our applicaiton
 the Vue component takes precedence if double definitions 
 mixin created() gets called before component created() hook
 
-global mixins
+global mixins (added to every instance & every component)
+you rarely want to use this 
+
+Vue.mixin()
+globalMixin created hook gets executed: 
+  * main.js new Vue 
+  * App.vue render
+  * List.vue component lifecycle hook 
+
