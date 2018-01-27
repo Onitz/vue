@@ -1453,3 +1453,8 @@ computed: {
 a global filter lets us access globally 
 duplicate code? (need to redefine fiters)
 use mixins instead
+
+vue.js cleverly merges the mixin 
+and the other js elements 
+
+
