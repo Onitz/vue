@@ -153,3 +153,4 @@
 11:51 AM 2018/01/27		sect13 filters mixins/003 computed are more performant than filters
 12:07 PM 2018/01/27		sect13 filters mixins/004 filters duplicate
 12:34 PM 2018/01/27		sect13 filters mixins/005 mixins
+12:39 PM 2018/01/27		sect13 filters mixins/006 mixin hooks get called before component hooks

@@ -1453,8 +1453,12 @@ computed: {
 a global filter lets us access globally 
 duplicate code? (need to redefine fiters)
 use mixins instead
-
 vue.js cleverly merges the mixin 
 and the other js elements 
 
 
+reusable code snippets across our applicaiton 
+the Vue component takes precedence if double definitions 
+mixin created() gets called before component created() hook
+
+global mixins
