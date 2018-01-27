@@ -1423,3 +1423,30 @@ parses from left to right
 
 (text->toUppercase)->to-lowercase 
 chain filters 
+
+FILTERS CAN BE A NICE SOLUTION, 
+BUT OFTEN COMPUTED ARE A BETTER SOLUTION
+(performance-wise)
+
+  <input v-model="filterText">
+  <ul>
+    <li v-for="fruit in filteredFruits">{{ fruit }}</li>
+  </ul>
+
+  data() {
+    return {
+      text: 'Hello there!',
+      fruits: ['Apple', 'Banana', 'Mango', 'Melon'],
+      filterText: ''
+    };
+  },
+computed: {
+    //vue knows on what such a property depends, so not as huge performance hit 
+    filteredFruits() { //this is a good alternative to a filter
+      return this.fruits.filter(element=>{
+        return element.match(this.filterText); //parsing a raw regex here, ok?
+        //case-sensitive matching
+      });
+    }
+  }
+
