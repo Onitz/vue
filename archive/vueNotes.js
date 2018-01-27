@@ -1375,3 +1375,21 @@ bind(el,binding,vnode)
 
 binding.value.mainColor   // ="{mainColor:red}"
 binding.arg               // :background
+
+You could Drastically cut down on filesize 
+if you found a way to install the typical webpack 
+  and babel node_modules globally....
+
+export default {
+  directives: {
+    myon: {
+      bind(el, binding, vnode) {
+        el.addEventListener(binding.arg, binding.value);
+      }
+    }
+  }
+}
+<h1 id="exx" v-myon:click="trig">Directives Exercise</h1>
+
+save install packages globally 
+$ npm install --save npm-install-global
