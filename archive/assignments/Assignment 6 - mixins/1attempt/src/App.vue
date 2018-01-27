@@ -25,8 +25,9 @@
 </template>
 
 <script>
-
+import { lengthAwareMixin } from './lengthAwareMixin';
 export default {
+  mixins: [lengthAwareMixin],
   data() {
     return {
       firstText: 'Some Text',
@@ -41,9 +42,6 @@ export default {
   computed: {
     reversed() {
       return this.firstText.split('').reverse().join('');
-    },
-    lengthAware() {
-      return this.secondText + ' (' + this.secondText.length +  ')';
     }
   }
 }
