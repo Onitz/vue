@@ -149,3 +149,4 @@
 09:21 AM 2018/01/27		sect12 directives/006 object in as directive argument
 09:23 AM 2018/01/27		sect12 directives/007 directive args in as object
 11:13 AM 2018/01/27		sect13 filters mixins/001 start sect10 filters mixins
+11:44 AM 2018/01/27		sect13 filters mixins/002 chain filters

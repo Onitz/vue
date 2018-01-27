@@ -1393,3 +1393,33 @@ export default {
 
 save install packages globally 
 $ npm install --save npm-install-global
+
+A filter is a syntax feature 
+that helps you transofrm output 
+in the data (what the user sees)
+das prey coo
+
+vue doesnt ship with filters 
+(have to build all our own) 
+say uppercase (can be done with css)
+
+Vue.filter 
+Vue.component 
+Vue.directive 
+
+main.js global filter rego 
+  Vue.filter('');
+
+<p>{{ text | toUppercase }}</p>
+  toUppercase(value) {
+    return value.toUpperCase();
+  }
+
+pipe symbol in hanldebars 
+to apply the filter 
+
+{{ text | toUppercase | to-lowercase }}
+parses from left to right
+
+(text->toUppercase)->to-lowercase 
+chain filters 
