@@ -5,16 +5,17 @@
         <h1>Filters &amp; Mixins</h1>
         <!-- Exercise 1) -->
         <!-- Build a local Filter which reverses the Text it is applied on -->
-        {{ 'Some Text' | reverse }}<br>
+        <p>{{ firstText | reverse }}</p>
 
         <!-- Exercise 2 -->
         <!-- Build a global Filter which counts the length of a word and it appends it -->
         <!-- Like this: "Test" => Gets Filtered to => "Test (4)" -->
-        {{ 'Some Text' | addCount }}<br>
+        <p>{{ secondText | addCount }}</p>
 
         <!-- Exercise 3 -->
         <!-- Do the same as in Exercises 1 & 2, now with Computed Properties -->
-        {{ reverseComp('Some Text') }}
+        <p>{{ reversed }}</p>
+        <p>{{ lengthAware }}</p>
 
         <!-- Exercise 4 -->
         <!-- Share the Computed Property rebuilding Exercise 2 via a Mixin -->
@@ -24,15 +25,25 @@
 </template>
 
 <script>
+
 export default {
+  data() {
+    return {
+      firstText: 'Some Text',
+      secondText: 'Dabson'
+    };
+  },
   filters: {
     reverse(value) {
       return value.split('').reverse().join('');
     }
   },
   computed: {
-    reverseComp: function(x) {
-      return x+'hi';
+    reversed() {
+      return this.firstText.split('').reverse().join('');
+    },
+    lengthAware() {
+      return this.secondText + ' (' + this.secondText.length +  ')';
     }
   }
 }
@@ -40,3 +51,4 @@ export default {
 
 <style>
 </style>
+ 
