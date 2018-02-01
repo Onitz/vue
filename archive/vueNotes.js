@@ -1,6 +1,9 @@
   npm install vue-cli -g
   vue init webpack-simple myProject
 
+howto hotload (webpack.config.js)
+  entry: ['webpack/hot/dev-server.js', './index.html'],   //entry: './src/main.js',
+'webpack/hot/dev-server.js', './index.html'
 https://babeljs.io/learn-es2015/  REALLY GOOD ES6 RESOURCE
 https://github.com/vuejs/vue-cli
   webpack    - A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction.
@@ -1476,9 +1479,9 @@ is not shared.
 
 ^ its safe to access + manip data 
 without breaking it 
-
 you can access mixin fields: 
   fruitMixin.field
 
 mixin gets copied, without influencing other 
 mixin of the same type 
+
