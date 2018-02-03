@@ -4,7 +4,9 @@
       @mousemove="doPaint"
       @mousedown="doMouseDown"
       @mouseup="stopPaint"
-      @mouseenter="stopPaint">
+      @mouseenter="stopPaint"
+
+      @touchmove="doFingerPaint">
     </canvas>
   </div>
 </template>
@@ -18,6 +20,7 @@ export default {
   }),
   methods: {
     doMouseDown(e) {
+      console.log('down');
       this.ctx.moveTo(e.pageX, e.pageY);
       this.ctx.beginPath();
       this.isPaint = true;
@@ -27,6 +30,13 @@ export default {
         this.ctx.lineTo(e.pageX, e.pageY);
         this.ctx.stroke();
       }
+    },
+    doFingerPaint(e) {
+      console.log(e);
+
+      let ct = e.changedTouches[0]
+      this.ctx.lineTo(ct.clientX, ct.clientY);
+      this.ctx.stroke();
     },
     stopPaint(e) {
       this.isPaint = false;

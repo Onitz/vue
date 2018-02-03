@@ -1485,3 +1485,4 @@ you can access mixin fields:
 mixin gets copied, without influencing other 
 mixin of the same type 
 
+http://stemkoski.github.io/Three.js/
