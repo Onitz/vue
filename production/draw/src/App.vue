@@ -1,11 +1,12 @@
 <template>
   <div id="paint">
     <canvas ref="myCanvas"
+      @mousedown="startPaint"
       @mousemove="doPaint"
-      @mousedown="doMouseDown"
       @mouseup="stopPaint"
       @mouseenter="stopPaint"
 
+      @touchstart="startPaint"
       @touchmove="doFingerPaint">
     </canvas>
   </div>
@@ -19,8 +20,7 @@ export default {
       ctx: null
   }),
   methods: {
-    doMouseDown(e) {
-      console.log('down');
+    startPaint(e) {
       this.ctx.moveTo(e.pageX, e.pageY);
       this.ctx.beginPath();
       this.isPaint = true;
@@ -32,8 +32,6 @@ export default {
       }
     },
     doFingerPaint(e) {
-      console.log(e);
-
       let ct = e.changedTouches[0]
       this.ctx.lineTo(ct.clientX, ct.clientY);
       this.ctx.stroke();
