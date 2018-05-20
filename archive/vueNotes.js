@@ -1527,3 +1527,14 @@ you'll need to chain the response.json promise using multiple then()s ie
 
 .then(responseHandler, errorHandler)
 
+
+Vue.http.options.root = 'https://vuejs-http-10a81.firebaseio.com/data.json'; 
+
+^ can use this to set default url
+
+interceptors.push((request, next)) //request is request, next is callback
+
+(on firebase)
+POST creates unique resources [unique id]
+PUT replaces existing values
+You can use interceptor to convert POST request to PUT request 
