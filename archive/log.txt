@@ -164,3 +164,4 @@
 06:15 AM 2018/05/21		sect15 http/006 post to put
 06:18 AM 2018/05/21		sect15 http/007 using interceptor callback to manipulate all responses
 06:24 AM 2018/05/21		sect15 http/008 using inbuilt vueResource save() to submit data
+06:29 AM 2018/05/21		sect15 http/009 define and call custom resource

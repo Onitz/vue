@@ -1546,3 +1546,16 @@ query()
 update()
 remove()
 delete()
+
+
+CUSTOM RESOURCE (defined in created() lifecycle hook)
+  // customActions is a custom resource. call using this.resource.saveAlt(this.user)
+  const customActions = {
+    saveAlt: {
+      method: 'POST',
+      url: 'alternative.json'
+    }
+  }
+
+CALL VIA
+this.resource.saveAlt(this.user);
