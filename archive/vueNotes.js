@@ -1490,5 +1490,19 @@ sect15 http -------------------------------------------------------------
 > flexible on which ajax library you want to use (ie jquery, vue-resource)
   vue-resource 
   vf commit message
-
+  npm install --save vue-resource
 Vue.use(); <- tells the global vue object to add a plugin 
+
+import Vue from 'vue'
+import VueResource from 'vue-resource';
+import App from './App.vue'
+Vue.use(VueResource); // vueResource plugin now available
+google firebase = service for backend web app
+  -database functionalities 
+  -auth functionalities 
+vuejs-http
+new project?
+  npm install 
+  npm build
+  npm run dev 
+
