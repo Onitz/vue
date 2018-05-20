@@ -1512,3 +1512,13 @@ this.$http // was added by VueResource
 
 VueResource uses promises (async promise to return)
 .then() is used for promises 
+response.json()
+// ^ extracts body of response and converts it to js object
+// response.json() actually also gives us back a promise
+// and not the extracted data right away 
+// no direct access console.log( data );
+
+instead of 
+  .then(response=>{ console.log( response.json() ); });
+you'll need to chain the response.json promise using multiple then()s ie
+  .then(r=>{ return r.json() }).then(r2{ console.log( r2.json() ) })
