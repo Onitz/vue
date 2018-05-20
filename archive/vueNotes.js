@@ -1506,3 +1506,9 @@ new project?
   npm build
   npm run dev 
 
+https://vuejs-http-10a81.firebaseio.com/data.json
+//(the .json is mandatory)
+this.$http // was added by VueResource
+
+VueResource uses promises (async promise to return)
+.then() is used for promises 

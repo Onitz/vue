@@ -158,3 +158,4 @@
 12:53 PM 2018/01/27		sect13 filters mixins/008 mixin notes
 02:24 PM 2018/05/20		sect15 http/001 init sect15 http
 03:02 PM 2018/05/20		sect15 http/002 setup frontend
+03:10 PM 2018/05/20		sect15 http/003 send data to firebase
