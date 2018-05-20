@@ -1538,3 +1538,11 @@ interceptors.push((request, next)) //request is request, next is callback
 POST creates unique resources [unique id]
 PUT replaces existing values
 You can use interceptor to convert POST request to PUT request 
+vue resource ships with some default actions / resources 
+ie 
+get()
+save()
+query()
+update()
+remove()
+delete()
