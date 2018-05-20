@@ -1484,5 +1484,11 @@ you can access mixin fields:
 
 mixin gets copied, without influencing other 
 mixin of the same type 
-
 http://stemkoski.github.io/Three.js/
+
+sect15 http -------------------------------------------------------------
+> flexible on which ajax library you want to use (ie jquery, vue-resource)
+  vue-resource 
+  vf commit message
+
+Vue.use(); <- tells the global vue object to add a plugin 
