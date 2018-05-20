@@ -160,3 +160,4 @@
 03:02 PM 2018/05/20		sect15 http/002 setup frontend
 03:10 PM 2018/05/20		sect15 http/003 send data to firebase
 03:24 PM 2018/05/20		sect15 http/004 output promise data
+03:54 PM 2018/05/20		sect15 http/005 set vueResource root url

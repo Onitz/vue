@@ -1509,6 +1509,8 @@ new project?
 https://vuejs-http-10a81.firebaseio.com/data.json
 //(the .json is mandatory)
 this.$http // was added by VueResource
+//only need $ when accessing from within Vue instance, else Vue.http to access on the global Vue object
+
 
 VueResource uses promises (async promise to return)
 .then() is used for promises 
@@ -1522,3 +1524,6 @@ instead of
   .then(response=>{ console.log( response.json() ); });
 you'll need to chain the response.json promise using multiple then()s ie
   .then(r=>{ return r.json() }).then(r2{ console.log( r2.json() ) })
+
+.then(responseHandler, errorHandler)
+
