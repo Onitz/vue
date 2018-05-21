@@ -1559,3 +1559,327 @@ CUSTOM RESOURCE (defined in created() lifecycle hook)
 
 CALL VIA
 this.resource.saveAlt(this.user);
+official docs 
+github.com/vuejs/vue-resource 
+sect 16 is routing
+
+//----
+
+Add to main.js 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+create routes.js file
+ES6 auto converts {myObj} to 
+{ 'myObj': myObj }
+
+<router-view></router-view> 
+<!-- ^ loads the router component-->
+/// uses hash mode by default /#/
+// Routing modes: hash vs history
+# routes are used a lot in single-page application
+without a #, every request is sent to the server 
+so you only really want it without the hash when initially loading 
+you need to always return the index.html file in all cases 
+to get rid of the #
+..then the vue router is allowed to take over
+in order to tell the vue-js router no hash, 
+set mode to: 'history'
+(default mode is 'hash')
+
+//main.js
+import VueRouter from 'vue-router';
+import { routes } from './routes';
+
+Vue.use(VueRouter);
+const router = new VueRouter ({
+  routes,
+  mode: 'history'
+});
+
+// this is thanks to webpack's express server setup to pump out the
+// index.html file in all defalut cases 
+https://router.vuejs.org/en/ 
+https://router.vuejs.org/en/essentials/history-mode.html
+HTML5 history mode leverages 
+history.pushState 
+API to achive URL navigation without a page reload ^_^
+vueJs course is still using bootstrap3, we''re on bootstrap4 now thou 
+use <router-link to=""> in lieu of <a href="">
+
+router-link has implicit click listener, converts to anchor beneth the hood
+does not reload page
+
+can replace 
+  <li role="presentation"><router-link to="/">Home</router-link></li>
+with 
+  <router-link to="/"     tag="li" active-class="active"><a>Home</a></router-link>
+
+it matches by anything starting with the @to attribute 
+so to="/" will active class Home on all pages :/
+to fix, add exact attribute
+
+<template>
+  <ul class="nav nav-pills">
+    <router-link to="/" exact tag="li" active-class="active"><a>Home</a></router-link>
+    <router-link to="/user" tag="li" active-class="active"><a>User</a></router-link>
+  </ul>
+</template>
+
+navigation within code:
+this.$router.push('/home');
+this.$router.push({path:'/'});
+
+DYNAMIC ROUTING 
+  { path: '/user/:id', component: User }
+
+maps to 
+/user/something
+(`something` is the id)
+..simply a flexible element in the url
+note, having nothing as the id will now link nowhere :(
+
+can access '/user/:id' via 
+  this.$route.params.id
+
+  export default {
+    data() {
+      return {
+        id: this.$route.params.id
+      };
+    },
+
+<p>id = {{id}}</p>
+..unfortunatly defining it as data() wont update the id if you're already on that component/
+
+    data() {
+      return {
+        id: this.$route.params.id
+      };
+    },
+    watch: {
+      '$route'(to, from) {
+        this.id = to.params.id;
+      }
+    },
+
+alternatively
+  computed: {
+    id: function() {
+      return this.$route.params.id;
+    }
+  },
+
+yeah, computed is a great alternative
+as of vue router 2.2, you can also 
+bind route params to props instead of 
+target components (eliminates need to watch or compute)
+vue-router 2.2: exact route params 
+https://github.com/vuejs/vue-router/tree/dev/examples/route-props
+
+EVEN BETTER THAN COMPUTED, 
+  { path: '/user/:id', component: User, props: true }
+set props: true to have the route parameter passed in as a prop 
+  props: {
+    id: {
+      type: Number,
+      default: 0
+    }
+  },
+
+see 
+https://github.com/vuejs/vue-router/blob/dev/examples/route-props/app.js
+for more examples 
+(currently complains about number, could do manual conversion in props: conversionFunc)
+or just do 
+  props: { 
+    id: {} 
+  },
+
+nestedRoutes (ie user/123)
+export const routes = [
+  { path: '',      component: Home },
+  { path: '/user', component: User, children: [
+    { path:'', component: UserStart },
+    { path:':id', component: UserDetail },
+    { path:':id/edit', component: UserEdit },
+  ]}
+];
+
+you need to set up a second <router-view> tag in the child component 
+<p>User loaded has ID: {{ $route.params.id }}</p> <!-- no need to watch without a way to directly navigate between components (bit dodgey) -->
+by adding a name: to a route defn, you can now refer to routes by name
+
+ie instead of/
+  :to="'/user/' + $route.params.id + '/edit'"
+can do 
+  :to="{name: 'userEdit', params: { id: $route.params.id} }"
+
+likewise, instead of 
+  this.$router.push('/')
+you could do 
+  this.$router.push({name: 'namedRoute'})
+(and also include params in the path object)
+
+query parameters! 
+<router-link to="/?a=100"/>
+
+    <router-link 
+      tag="button" 
+      :to="{name: 'userEdit', params: { id: $route.params.id}, query: {locale: 'en', q: 100} }"
+      class="btn btn-primary">Edit User</router-link>
+
+to append query params to the url object, use query: {k:v}
+fetching query Params
+    <p>Locale: {{ $route.query.locale }}</p>
+(You''ll likewise want to setup a watcher/prop/computed 
+  if navigating between the same page with different params or queryParams)
+
+you can use multiple <router-view>s to say, for instance, change the positioning of the the header
+use named headers for this (App.js) replace:
+  <app-header></app-header>
+  <router-view></router-view>
+
+  <router-view name="header-top"></router-view>
+  <router-view></router-view>
+  <router-view name="header-bottom"></router-view>
+routes.js
+  { path: '', name: 'home', components: {
+      default: Home, 
+      'header-top': Header
+    }
+  },
+
+so, we can essentially define which section the Header gets defined in by defining the component in the route
+..interdasting
+
+instead of defining route.component, define route.components
+this permits switching a layout based on route
+you can wrap routes in transitions :)
+  <transition name="slide" mode="out-in">
+    <router-view></router-view>
+  </transition>
+
+out-in mode: old component is removed before new one is added 
+navigating to hash fragment ie 
+http://localhost:8080/user/1/edit?locale=en&q=100#data
+remember this when inside vue instance ie 
+this.$route.params.id 
+
+    <router-link 
+      tag="button" 
+      :to="link"
+      class="btn btn-primary">Edit User</router-link>
+
+<script>/
+  export default {
+    data() {
+      return {
+        link: {
+          name: 'userEdit', 
+          params: { 
+            id: this.$route.params.id
+          }, 
+          query: {
+            locale: 'en', 
+            q: 100
+          },
+          hash: '#data'
+        }
+      }
+    }
+  }
+</script>
+
+the hash gets appended to urls, 
+but wont affect scroll behavior without 
+scrollBehavior(to, from, savedPosition) 
+being defined in the router setup
+
+hash and scroll 
+Vue.use(VueRouter);
+const router = new VueRouter ({
+  routes,
+  mode: 'history',
+  scrollBehavior(to, from, savedPosition) {
+    if(to.hash) {
+      return {
+        selector: to.hash
+      };
+    }
+    //return {x: 0, y: 700};
+  }
+});
+
+router.beforeEach((to,from,next) => {
+  console.log('global beforeEach');
+  next();
+});
+
+//you can pass in object to next() to alter default routing behavior 
+
+you can define a beforeEnter() function for each route 
+ie 
+export const routes = [
+  { 
+    path:':id', 
+    component: UserDetail, 
+    beforeEnter:: (to,from,next) => {
+      next()
+    }
+  }
+]
+
+you can implement pre-routeing function: 
+  globally: beforeEach() 
+  per-route: beforeEnter()
+  per-component: beforeRouteEnter()
+
+^beforeRouteEnter() is defined like a lifeCycle hook 
+implemented by the vue-router 
+it gets called in that order (global, per-route, per-component)
+
+if you dont call next() from within component, you wont be able to access any local 
+variables in data() because next() routing is required to access component.
+so we''re in the file, but the object hasnt been fully initialised.
+you can access via callback 
+  beforeRouteEnter(to,from,next) {
+    console.log('beforeRouteEnter');
+    next(vm=>{
+      vm.link;
+    });
+  }
+
+in all 3 places you dont have access to the pre/non-initialised component 
+beforeRouteLeave(to,from,next) can only be called per-component
+
+for a very big application, you might want to lazy-load pages 
+webpack bundling has a disadvantage for large applications cause your loading your entire application at once 
+lazy-load: only load what we need when we need it, like hibernate 
+
+// import User from './components/user/User.vue';
+const User = resolve => {
+  require.ensure(
+    ['./components/User/User.vue'],
+    () => {
+      resolve( require('./components/user/User.vue') );
+    }
+  );
+};
+
+^ tells webpack to split up the bundle! :) 
+resolve resolves the promise to use the path you really want to use 
+resolve() is an async function
+
+you can see how it works in developerTools -> network
+
+
+
+You can also group collections of subcomponents! WOW!
+
+const UserDetail = resolve => {
+  require.ensure(['./components/User/UserDetail.vue'], () => {
+      resolve( require('./components/user/UserDetail.vue') ); 
+  }, 'user');
+};
+
